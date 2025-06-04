@@ -1,0 +1,569 @@
+current:
+  head:
+    - RobertoCarbone
+
+  members:
+    - AmirSharif
+    - AndreaBisegna
+    - AndreaMoro
+    - CeciliaPasquini
+    - EleonoraMarchesini
+    - GiadaSciarretta
+    - GianlucaSassetti
+    - GiovanniCorti
+    - MajidMollaeefar
+    - MarcoPernpruner
+    - MarioRaciti
+    - MatteoRizzi
+    - MuhammadImran
+    - RiccardoGermenia
+    - RiccardoZiglio
+    - SalvatoreManfredi
+    - SimoneBrunello
+    - TahirAhmad
+    - UmbertoMorelli
+    - ZahraEbadiAnsaroudi
+
+  collaborators:
+      
+  students:
+    - personId: AndreaBissoli
+      type: B
+      topic: Enhancing Privacy Threat Modeling with Large Language Models
+      institution: University of Trento
+      yearFrom: 2024
+      yearTo: 2024
+
+    - personId: NiccolòLechthaler
+      type: B
+      topic: Micro-Id Gym
+      institution: University of Trento
+      yearFrom: 2024
+      yearTo: 2024
+
+    - personId: FilippoGrilli
+      type: M
+      topic: Security Analysis of Identity Managament Protocols
+      institution: University of Trento
+      yearFrom: 2025
+      yearTo: 2025
+
+    - personId: NizarNadif
+      type: B
+      topic: Context-free grammar for TLS validation
+      institution: University of Trento
+      yearFrom: 2025
+      yearTo: 2025
+
+    - personId: DanieleCalvo
+      type: B
+      topic: Threat Modeling by Leveraging Agentic AI
+      institution: University of Trento
+      yearFrom: 2025
+      yearTo: 2025
+
+    - personId: MattiaMaramotti
+      type: B
+      topic: Automatic Security Testing Tool for Identity Management Protocols
+      institution: University of Trento
+      yearFrom: 2025
+      yearTo: 2025
+
+    - personId: LorenzoZarantonello
+      type: B
+      topic: Automatic Security Testing Tool for Identity Management Protocols
+      institution: University of Trento
+      yearFrom: 2025
+      yearTo: 2025
+
+  junior:    
+      
+former:
+  head:
+    - personId: AlessandroArmando
+      formerRole: Founder and Head of Unit
+      yearFrom: 2010
+      yearTo: 2016
+
+    - personId: SilvioRanise
+      formerRole: Head of Unit
+      yearFrom: 2017
+      yearTo: 2020
+
+  members:
+    - personId: MarianoCeccato
+      formerRole: Researcher
+      yearTo: 2019
+
+    - personId: EmanueleViglianisi
+      formerRole: Technologist
+      yearTo: 2019
+
+    - personId: SergiiKushch
+      formerRole: Researcher
+      yearTo: 2019
+
+    - personId: AlbertoSiena
+      formerRole: Researcher
+      yearTo: 2020
+
+    - personId: GiovanniMariaAbbiati
+      formerRole: Consultant
+      yearTo: 2020
+
+    - personId: ClaraBertolissi
+      formerRole: Visiting Researcher
+      yearFrom: 2011
+      yearTo: 2013
+
+    - personId: AnnibalePanichella
+      formerRole: Post-doc Researcher
+      yearFrom: 2014
+      yearTo: 2014
+
+    - personId: RiccardoTraverso
+      formerRole: Post-doc Researcher
+      yearFrom: 2014
+      yearTo: 2016
+
+    - personId: MatteoLeonelli
+      formerRole: Junior Researcher
+      yearFrom: 2019
+      yearTo: 2020
+
+    - personId: SalimehDashti
+      formerRole: Researcher
+      yearFrom: 2021
+      yearTo: 2022
+
+    - personId: BiniamFissehaDemissie
+      formerRole: Researcher
+      yearFrom: 2019
+      yearTo: 2022
+
+    - personId: GiacomoZanolli
+      formerRole: Junior Researcher
+      yearFrom: 2022
+      yearTo: 2023
+
+    - personId: GiuseppeAlessioSciumè
+      formerRole: Junior Researcher
+      yearFrom: 2022
+      yearTo: 2023
+
+    - personId: MatteoBitussi
+      formerRole: Research Assistant
+      yearFrom: 2022
+      yearTo: 2024
+
+    - personId: LauraPiva
+      formerRole: Visiting PhD Student
+      yearFrom: 2024
+      yearTo: 2024
+
+    - personId: AlessandroTomasi
+      formerRole: Researcher
+      yearTo: 2023
+
+    - personId: RiccardoLussana
+      formerRole: Research Assistant
+      yearFrom: 2023
+      yearTo: 2024
+
+    - personId: ElhamArshad
+      formerRole: Researcher
+      yearFrom: 2023
+      yearTo: 2025
+
+  phdStudents:
+    - personId: FedericoSinigaglia
+      thesisId: FedericoSinigaglia_P
+
+    - personId: TahirAhmad
+      thesisId: TahirAhmad_P
+
+    - personId: AvinashSudhodanan
+      thesisId: AvinashSudhodanan_P
+
+    - personId: HariSiswantoro
+      thesisId: HariSiswantoro_P
+
+    - personId: BiniamFissehaDemissie
+      thesisId: BiniamFissehaDemissie_P
+
+    - personId: GiadaSciarretta
+      thesisId: GiadaSciarretta_P
+
+    - personId: DanielDosSantos
+      thesisId: DanielDosSantos_P
+
+    - personId: TuanAnhTruong
+      thesisId: TuanAnhTruong_P
+
+    - personId: NadiaMetoui
+      thesisId: NadiaMetoui_P
+
+    - personId: AlessioColetta
+      thesisId: AlessioColetta_P
+
+    - personId: AmirSharif
+      thesisId: AmirSharif_P
+
+    - personId: SalimehDashti
+      thesisId: SalimehDashti_P
+
+    - personId: MajidMollaeefar
+      thesisId: MajidMollaeefar_P
+
+    - personId: SalvatoreManfredi
+      thesisId: SalvatoreManfredi_P
+
+    - personId: AndreaBisegna
+      thesisId: AndreaBisegna_P
+
+    - personId: MarcoPernpruner
+      thesisId: MarcoPernpruner_P
+
+    - personId: StefanoBerlato
+      thesisId: StefanoBerlato_P
+  
+  students:
+    - personId: MarcoPernpruner
+      thesisId: MarcoPernpruner_M
+
+    - personId: StefanoBerlato
+      thesisId: StefanoBerlato_M
+
+    - personId: SalvatoreManfredi
+      thesisId: SalvatoreManfredi_M
+
+    - personId: AlessioValenza
+      thesisId: AlessioValenza_B
+
+    - personId: DavidePiva
+      thesisId: DavidePiva_B
+
+    - personId: CarlottaTagliaro
+      thesisId: CarlottaTagliaro_B
+
+    - personId: LorenzoTait
+      thesisId: LorenzoTait_B
+
+    - personId: IvanMartini
+      thesisId: IvanMartini_B
+
+    - personId: ValentinaOdorizzi
+      thesisId: ValentinaOdorizzi_B
+
+    - personId: SaverioTuretta
+      thesisId: SaverioTuretta_B
+
+    - personId: MirkoSchicchi
+      thesisId: MirkoSchicchi_B
+
+    - personId: GiulioPellizzari
+      thesisId:
+        - GiulioPellizzari_B
+        - GiulioPellizzari_M
+      
+    - personId: GiovanniFerronato
+      thesisId: GiovanniFerronato_B
+
+    - personId: EnricoDonatoni
+      thesisId: EnricoDonatoni_B
+
+    - personId: DanieleDelSale
+      thesisId: DanieleDelSale_B
+
+    - personId: DamianoSartori
+      thesisId: DamianoSartori_B
+
+    - personId: MartaToniolli
+      thesisId: MartaToniolli_B
+
+    - personId: SofiaPuttin
+      type: M
+      topic: 5G-BSA-ID cryptoband - Analisi giuridica alla luce delle disposizioni in materia di trattamento dei dati e tutela della privacy
+      institution: University of Trento
+      yearFrom: 2020
+      yearTo: 2020
+
+    - personId: SoniaEccher
+      topic: Risk Assessment Smart Campus
+      yearFrom: 2014
+      yearTo: 2014
+      
+    - personId: VincenzoChiarini
+      topic: Studio dell'usabilità di soluzioni di Single Sign-On e autenticazione forte per applicazioni mobile.
+      institution: University of Trento
+      yearFrom: 2017
+      yearTo: 2017
+
+    - personId: LucaMorgese
+      thesisId: LucaMorgese_B
+
+    - personId: MartaArisi
+      type: M
+      topic: "Blockchain and e-health: seeking compliance with the General Data Protection Regulation"
+      institution: University of Trento
+      yearFrom: 2019
+      yearTo: 2019
+
+    - personId: ClaudioGrisenti
+      thesisId: ClaudioGrisenti_B
+
+    - personId: StefanoFacchini
+      thesisId: StefanoFacchini_B
+      
+    - personId: MatteoRizzi
+      thesisId: MatteoRizzi_B
+      
+    - personId: MatteoLongato
+      thesisId: MatteoLongato_B
+
+    - personId: AdrienBeaugendre
+      thesisId: AdrienBeaugendre_M
+
+    - personId: ChaudhryMuhammadSuleman
+      thesisId: ChaudhryMuhammadSuleman_M
+
+    - personId: VeronicaCristiano
+      thesisId: VeronicaCristiano_M
+
+    - personId: WendyBarreto
+      thesisId: WendyBarreto_B
+    
+    - personId: LucaBazzanella
+      thesisId: LucaBazzanella_B
+
+    - personId: FrancescoDefilippo
+      thesisId: FrancescoDefilippo_B
+
+    - personId: GiacomoZanolli
+      thesisId: GiacomoZanolli_B
+
+    - personId: AlessandroPegoraro
+      thesisId: AlessandroPegoraro_B
+
+    - personId: LeonardoXompero
+      thesisId: LeonardoXompero_B
+
+    - personId: GiuseppeLamorgese
+      thesisId: GiuseppeLamorgese_B
+
+    - personId: LorenzoBellesso
+      thesisId: LorenzoBellesso_PG
+
+    - personId: MatteoLeonelli
+      thesisId: MatteoLeonelli_B
+
+    - personId: RupertGobber
+      thesisId: RupertGobber_M
+
+    - personId: MartinaVecellioReane
+      thesisId: MartinaVecellioReane_B
+
+    - personId: AlessandroColombo
+      thesisId: AlessandroColombo_B
+
+    - personId: StefanoDaRoit
+      thesisId: StefanoDaRoit_B
+
+    - personId: IvanValentini
+      thesisId: IvanValentini_B
+
+    - personId: FedericoCucino
+      thesisId: FedericoCucino_B
+
+    - personId: NicolaCasagrande
+      thesisId: NicolaCasagrande_B
+
+    - personId: EnricoMarconi
+      thesisId: EnricoMarconi_B
+
+    - personId: GiuseppeAlessioSciumè
+      thesisId:
+        - GiuseppeAlessioSciumè_B
+        - GiuseppeAlessioSciumè_M
+
+    - personId: MicheleZucchelli
+      thesisId: MicheleZucchelli_B
+
+    - personId: MircoBisoffi
+      thesisId: MircoBisoffi_B
+
+    - personId: SofiaZanrosso
+      thesisId: SofiaZanrosso_B
+
+    - personId: EleonoraMarchesini
+      thesisId: EleonoraMarchesini_M
+
+    - personId: MatteoBitussi
+      thesisId: MatteoBitussi_B
+
+    - personId: EricaElia
+      thesisId: EricaElia_M
+
+    - personId: IonAndyDitu
+      thesisId: IonAndyDitu_B
+
+    - personId: AlessandroBiasi
+      thesisId: AlessandroBiasi_B
+
+    - personId: LuigiDellEva
+      thesisId: LuigiDellEva_B
+
+    - personId: RobertaPeracchio
+      thesisId: RobertaPeracchio_M
+
+    - personId: RiccardoGermenia
+      thesisId: RiccardoGermenia_B
+
+    - personId: SaraSorrentino
+      thesisId: SaraSorrentino_B
+
+    - personId: GianlucaSassetti
+      thesisId: GianlucaSassetti_M
+
+    - personId: MattiaBressan
+      thesisId: MattiaBressan_B
+
+    - personId: MarioScuro
+      thesisId: MarioScuro_M
+
+    - personId: RiccardoZiglio
+      thesisId: RiccardoZiglio_M
+
+    - personId: KaleemUllahKaleemUllah
+      thesisId: KaleemUllahKaleemUllah_M
+
+    - personId: SimoneAvancini
+      thesisId: SimoneAvancini_B
+
+    - personId: PierGuidoSeno
+      thesisId: PierGuidoSeno_B
+
+    - personId: FedericoGraziola
+      thesisId: FedericoGraziola_M
+
+    - personId: MarcoFrassoni
+      thesisId: MarcoFrassoni_M
+
+    - personId: StefanoCamposilvan
+      thesisId: StefanoCamposilvan_B
+
+    - personId: AlessandroFontana
+      thesisId: AlessandroFontana_B
+
+    - personId: MatteoBregola
+      thesisId: MatteoBregola_B
+
+    - personId: FilippoDeGrandi
+      thesisId: FilippoDeGrandi_B
+
+    - personId: RobertoSavi
+      thesisId: RobertoSavi_B
+
+    - personId: AgnieszkaKowalska
+      type: B
+      topic: Automatic Security Testing Tool for Identity Management Protocols
+      institution: University of Trento
+      yearFrom: 2023
+      yearTo: 2024
+
+  junior:
+    - personId: YuriTomasini
+      topic: Cybersecurity 101
+      institution: Liceo Scientifico "Leonardo Da Vinci", Trento
+      yearFrom: 2021
+      yearTo: 2021
+
+    - personId: MatteoPaoloFurlan
+      topic: Cybersecurity 101
+      institution: Liceo Scientifico "Leonardo Da Vinci", Trento
+      yearFrom: 2021
+      yearTo: 2021
+
+    - personId: NicolòMicheletti
+      topic: Cybersecurity 101
+      institution: Liceo Scientifico "Leonardo Da Vinci", Trento
+      yearFrom: 2021
+      yearTo: 2021
+
+    - personId: AlessandroMerlo
+      topic: Cybersecurity 101
+      institution: Liceo Scientifico "Leonardo Da Vinci", Trento
+      yearFrom: 2021
+      yearTo: 2021
+
+    - personId: GiovanniMarchi
+      topic: Cybersecurity 101
+      institution: Liceo Scientifico "Leonardo Da Vinci", Trento
+      yearFrom: 2021
+      yearTo: 2021
+
+    - personId: RayhanaTaoufik
+      topic: Cybersecurity 101
+      institution: Liceo "Antonio Rosmini", Rovereto
+      yearFrom: 2021
+      yearTo: 2021
+
+    - personId: LeonardoVicentini
+      topic: Cybersecurity 101
+      institution: Liceo Scientifico "Leonardo Da Vinci", Trento
+      yearFrom: 2021
+      yearTo: 2021
+
+    - personId: FilippoBenedetti
+      topic: Cybersecurity 101
+      institution: Liceo Scientifico "Leonardo Da Vinci", Trento
+      yearFrom: 2021
+      yearTo: 2021
+
+    - personId: MatildeSalaorni
+      topic: OSINT e l'assessment del rischio nei social media
+      institution: Liceo Steam International, Rovereto
+      yearFrom: 2023
+      yearTo: 2023
+
+    - personId: MattiaConci
+      topic: OSINT e l'assessment del rischio nei social media
+      institution: Istituto Tecnico Tecnologico "Michelangelo Buonarroti", Trento
+      yearFrom: 2023
+      yearTo: 2023
+      
+    - personId: FedericaMascia
+      topic: Awareness - percezione del rischio
+      institution: Istituto Tecnico Tecnologico "Michelangelo Buonarroti", Trento
+      yearFrom: 2023
+      yearTo: 2023
+
+    - personId: DavideModena
+      topic: Awareness - percezione del rischio
+      institution: Istituto Tecnico Tecnologico "Michelangelo Buonarroti", Trento
+      yearFrom: 2023
+      yearTo: 2023
+
+    - personId: AndreaBrandolini
+      topic: Cybersecurity 101
+      institution: Istituto Tecnico Tecnologico "Michelangelo Buonarroti", Trento
+      yearFrom: 2022
+      yearTo: 2023
+
+    - personId: MattiaAndreolli
+      topic: Cybersecurity 101
+      institution: Istituto Tecnico Tecnologico "Michelangelo Buonarroti", Trento
+      yearFrom: 2022
+      yearTo: 2023
+      
+    - personId: DanielFranchini
+      topic: Virtualization of TLS vulnerabilities
+      institution: Istituto Tecnico Tecnologico "Michelangelo Buonarroti", Trento
+      yearFrom: 2024
+      yearTo: 2024
+      
+    - personId: EmilianoRizzonelli
+      topic: Virtualization of TLS vulnerabilities
+      institution: Istituto Tecnico Tecnologico "Michelangelo Buonarroti", Trento
+      yearFrom: 2024
+      yearTo: 2024

@@ -1,0 +1,30 @@
+<section
+    class="hero {% if page.hero_height %}{{ page.hero_height }}{% endif %} is-bold is-primary"
+    {% if page.hero_image %}
+        style="background: url('{{ page.hero_image }}') no-repeat center center; background-size: cover;"
+    {% endif %}
+>
+    <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">
+        <div class="container">
+            <div class="hero-left">
+                {% if page.show_logos and site.entity_type == "unit" and site.logos.unit %}
+                    <img src="{{ site.logos.unit.symbol.white | default: site.logos.unit.symbol.default | default: site.logos.unit.regular.white }}" class="logo" />
+                {% endif %}
+                <div>
+                    <h1 class="title is-2 no-toc">{{ page.title }}</h1>
+                    <p class="subtitle is-3">{{ page.subtitle }}</p>
+                    {% if page.hero_link %}
+                        <div class="my-4">
+                            <a href="{{ page.hero_link | relative_url }}" class="button is-info is-large">
+                                {{- page.hero_link_text -}}
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="hero-right">
+                {% if page.show_logos and site.logos.center %}<img src="{{ site.logos.center.symbol.white | default: site.logos.center.symbol.default | default: site.logos.center.regular.white }}" class="is-hidden-touch logo right" />{% endif %}
+            </div>
+        </div>
+    </div>
+</section>

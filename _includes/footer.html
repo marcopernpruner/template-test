@@ -1,0 +1,82 @@
+<footer class="footer">
+    <div class="container">
+        {% if site.footer_menu %}
+            <div class="columns is-multiline">
+                {% for item in site.data[site.footer_menu] %}
+                    <div class="column has-text-centered is-small">
+                        <div>
+                            <a href="{{ item.link | relative_url }}" class="link">{{ item.name }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="columns is-multiline">
+            <div class="column has-text-centered is-3-desktop is-3-tablet is-hidden-mobile">
+                {% if site.entity_type == "unit" and site.logos.unit %}
+                    <img class="logo" src="{{ site.logos.unit.regular.default }}" />
+                {% elsif site.entity_type == "center" and site.logos.center %}
+                    <img class="logo" src="{{ site.logos.center.regular.default }}" />
+                {% endif %}
+            </div>
+
+            <div class="column has-text-centered is-6-desktop is-6-tablet is-12-mobile">
+                <div class="content is-small has-text-centered company-data">
+                    {% if site.entity_type == "unit" %}
+                        <p class="">{{ site.organization.unit.name | default: "Research Unit" }}</p>
+                        <p class="">{{ site.organization.center.name | default: "Research Center" }}</p>
+                    {% elsif site.entity_type == "center" %}
+                        <p class="">{{ site.organization.center.name | default: "Research Center" }}</p>
+                    {% endif %}
+                    <p class=""><a href="https://www.fbk.eu">Fondazione Bruno Kessler</a></p>
+                    <p class="">Via Sommarive, 18</p>
+                    <p class="">38123 Povo, Trento, Italy</p>
+                </div>
+
+                <div class="content is-small has-text-centered content-manager">
+                    <p class=""><b>Content Manager:</b></p>
+                    <p class="">{{ site.content-manager.name | default: "Content Manager Name" }}</p>
+                    <p class="">{{ site.content-manager.affiliation | default: "Research Unit" }}</p>
+                    <p class="">Phone: {{ site.content-manager.phone | default: "Content Manager Phone" }}</p>
+                    <p class="">Email: {{ site.content-manager.email | default: "Content Manager Email" }}</p>
+                </div>
+
+                {% include follow.html %}
+
+                <div class="content is-small has-text-centered disclaimer">
+                    <p><i>The use of content covered by intellectual property is carried out in compliance with articles 2, 21, 33 of the Constitution and art. 70 of the copyright law.</i></p>
+                </div>
+
+                <div class="content is-small has-text-centered">
+                    <p class="">Theme built by <a href="https://www.csrhymes.com">C.S. Rhymes</a></p>
+                </div>
+            </div>
+
+            <div class="column has-text-centered is-3-desktop is-3-tablet is-hidden-mobile">
+                {% if site.entity_type == "unit" and site.logos.center %}
+                    <img class="logo" src="{{ site.logos.center.regular.default }}" />
+                {% endif %}
+            </div>
+
+            <div class="column has-text-centered is-12-mobile is-hidden-tablet">
+                <div class="columns is-multiline is-mobile">
+                    {% if site.entity_type == "unit" and site.logos.unit %}
+                        <div class="column has-text-centered is-12-mobile">
+                            <img class="logo" src="{{ site.logos.unit.regular.default }}" />
+                        </div>
+                    {% elsif site.entity_type == "center" and site.logos.center %}
+                        <div class="column has-text-centered is-12-mobile">
+                            <img class="logo" src="{{ site.logos.center.regular.default }}" />
+                        </div>
+                    {% endif %}
+                    {% if site.entity_type == "unit" and site.logos.center %}
+                        <div class="column has-text-centered is-12-mobile">
+                            <img class="logo" src="{{ site.logos.center.regular.default }}" />
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

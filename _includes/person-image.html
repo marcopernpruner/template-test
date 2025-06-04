@@ -1,0 +1,22 @@
+{% assign person = include.person %}
+{% assign staticImageName = person.id | append: ".jpg" %}
+{% assign staticImageNameNoAccents = staticImageName | replace: 'à', 'a' | replace: 'è', 'e' | replace: 'ì', 'i' |
+replace: 'ò', 'o' | replace: 'ù', 'u' %}
+{% assign staticImage = site.static_files | where_exp: "file", "file.name == staticImageNameNoAccents" %}
+
+{% if person.image %}
+{% assign personImage = person.image %}
+{% elsif staticImage.size == 1 %}
+{% assign personImage = staticImage[0].path %}
+{% elsif person.usernameFBK %}
+{% assign personImage = "https://my.fbk.eu/fbk-api/v2/picture/" | append: person.usernameFBK | append: "?w=300" %}
+{% elsif person.email %}
+{% assign emailParts = person.email | split: '@' %}
+{% if emailParts[1] == "fbk.eu" %}
+{% assign personImage = "https://my.fbk.eu/fbk-api/v2/picture/" | append: emailParts[0] | append: "?w=300" %}
+{% else %}
+{% assign personImage = "https://my.fbk.eu/fbk-api/v2/picture/no-user?w=300" %}
+{% endif %}
+{% endif %}
+
+{{ personImage }}

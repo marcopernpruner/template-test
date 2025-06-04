@@ -1,0 +1,25 @@
+#- name: Collaborations
+ # link: /collaborations
+- name: Dissemination
+  link: /dissemination/
+- name: Events
+  link: /events/
+- name: News
+  link: /news/
+- name: People
+  link: /people/
+  dropdown:
+    - name: The Unit
+      link: /people/unit
+    - name: Current Members
+      link: /people/
+    - name: Former Members
+      link: /people/former
+- name: Projects
+  link: /projects/
+- name: Publications
+  link: /publications/
+- name: Teaching
+  link: /teaching/
+- name: Tools
+  link: /tools/

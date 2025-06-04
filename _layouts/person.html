@@ -1,0 +1,216 @@
+---
+layout: default
+---
+
+{% assign person = site.data.people | where: "id", page.person | first %}
+{% if person == nil %}
+    <div class="notification is-danger">Error: Person not found.</div>
+{% else %}
+    {% capture personImage %}
+        {% include person-image.html person=person %}
+    {% endcapture %}
+
+    {% if person.phone %}
+        {% assign phone = person.phone %}
+        {% assign contactsAvailable = true %}
+    {% endif %}
+
+    {% if person.email %}
+        {% assign email = person.email %}
+        {% assign contactsAvailable = true %}
+    {% endif %}
+
+    {% assign roleST = "Collaborator" %}
+    {% if person.affiliations %}
+        {% for affiliation in person.affiliations %}
+            {% if affiliation.institution == "Fondazione Bruno Kessler" %}
+                {% if affiliation.unit == "Security & Trust" or affiliation.unit == "Center for Cybersecurity" %}
+                    {% assign roleST = affiliation.role %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <div class="content single-fbkperson">
+        <span id="set-title">{{ person.name }} {{ person.surname }}</span>
+        <span id="set-subtitle">{{ roleST }}</span>
+
+        <div class="columns is-multiline reverse-columns">
+            <div class="column is-8-tablet is-9-desktop">
+
+                {% if page.url contains 'archive' %}
+                    <div class="notification is-warning">
+                        <strong>Notice:</strong> This page has been archived. The person is no longer affiliated with the Security & Trust unit.
+                    </div>
+                {% endif %}
+
+                {% if content and content != "" %}
+                    <section class="contains-bio">{{ content }}</section>
+                {% endif %}
+
+                <div id="toc"></div>
+
+                <!-- PUBLICATIONS -->
+                {% assign publications = site.data.publications | where_exp: "p", "p.authors contains page.person" | where_exp: "p", "p.id_iris != nil" %}
+                {% if publications and publications != empty %}
+                    {% assign publicationsByYear = publications | group_by: "year" | sort: "name" | reverse %}
+                    <section class="contains-publications">
+                        <h1>Publications</h1>
+                        {% for group in publicationsByYear %}
+                            <h4>{{ group.name }}</h4>
+                            {% include list-publications.html source=group.items sort="title" %}
+                        {% endfor %}
+                    </section>
+                {% endif %}
+
+                <!-- THESES -->
+                {% assign theses = site.data.theses | where_exp: "t", "t.author == page.person" %}
+                {% if theses and theses != empty %}
+                    {% assign theses = theses | sort: "year" | reverse %}
+                    <section class="contains-theses">
+                        <h1>Theses</h1>
+                        {% include list-theses.html source=theses %}
+                    </section>
+                {% endif %}
+
+                <!-- PROJECTS -->
+                {% assign today = 'now' | date: '%Y-%m-%d' %}
+                {% assign currentProjects = "" | split: "" %}
+                {% assign formerProjects = "" | split: "" %}
+                {% assign linkedProjects = site.projects | where_exp: "p", "p.people contains page.person" %}
+                {% for p in linkedProjects %}
+                    {% assign projectObj = site.data.projects | where: "id", p.project | first %}
+                    {% if projectObj %}
+                        {% if projectObj.endDate == nil or projectObj.endDate >= today %}
+                            {% assign currentProjects = currentProjects | push: projectObj %}
+                        {% else %}
+                            {% assign formerProjects = formerProjects | push: projectObj %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                {% if currentProjects.size > 0 or formerProjects.size > 0 %}
+                    <section class="contains-projects">
+                        <h1>Projects</h1>
+                        {% if currentProjects.size > 0 %}
+                            <h4>Current</h4>
+                            {% include list-projects.html source=currentProjects sort="title" style="card" %}
+                        {% endif %}
+                        {% if formerProjects.size > 0 %}
+                            <h4>Former</h4>
+                            {% include list-projects.html source=formerProjects sort="title" style="card" %}
+                        {% endif %}
+                    </section>
+                {% endif %}
+
+                <!-- DISSEMINATION -->
+                {% assign dissemination = site.data.dissemination | where_exp: "d", "d.participants contains page.person" %}
+                {% if dissemination and dissemination != empty %}
+                    {% assign disseminationByDate = dissemination | group_by: "startDate" | sort: "name" | reverse %}
+                    <section class="contains-dissemination">
+                        <h1>Dissemination</h1>
+                        {% assign seenYear = "" %}
+                        {% for group in disseminationByDate %}
+                            {% assign year = group.name | date: "%Y" %}
+                            {% if seenYear != year %}
+                                <h4>{{ year }}</h4>
+                                {% assign seenYear = year %}
+                            {% endif %}
+                            {% include list-dissemination.html source=group.items sort="title" style="list" %}
+                        {% endfor %}
+                    </section>
+                {% endif %}
+
+                <!-- SUPERVISED THESES -->
+                {% assign supervisedTheses = "" | split: "" %}
+                {% for t in site.data.theses %}
+                    {% if t.supervisor contains page.person or t.co-supervisor contains page.person %}
+                        {% assign supervisedTheses = supervisedTheses | push: t %}
+                    {% endif %}
+                {% endfor %}
+                {% if supervisedTheses and supervisedTheses != empty %}
+                    {% assign supervisedByYear = supervisedTheses | group_by: "year" | sort: "name" | reverse %}
+                    <section class="contains-supervised-theses">
+                        <h1>Supervised Theses</h1>
+                        {% for group in supervisedByYear %}
+                            <h4>{{ group.name }}</h4>
+                            {% include list-theses.html source=group.items sort="title" %}
+                        {% endfor %}
+                    </section>
+                {% endif %}
+                </div>
+
+                <div class="column is-4-tablet is-3-desktop">
+                {% if personImage %}
+                    <div class="profile-thumb">
+                        <img src="{{ personImage }}" alt="{{ person.name }} {{ person.surname }}">
+                    </div>
+                {% endif %}
+
+                <section class="additional-info-wrapper">
+                    {% if contactsAvailable %}
+                        <div class="section-title">Contacts</div>
+                        <ul class="people-contacts-list">
+                            {% if phone %}
+                                <li class="contains-phone"><a href="tel:{{ phone }}">{{ phone }}</a></li>
+                            {% endif %}
+                            {% if email %}
+                                <li class="contains-email"><a href="mailto:{{ email }}">{{ email }}</a></li>
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+
+                    {% if page.links and page.links != empty %}
+                        {% assign links = page.links | sort_natural: "name" %}
+                        <div class="section-title">Links</div>
+                        <ul class="people-links-list">
+                            {% for link in links %}
+                                {% assign linkName = nil %}
+                                {% assign linkURL = nil %}
+                                {% case link.name %}
+                                    {% when "ACM" %}
+                                        {% assign linkName = "ACM" %}
+                                        {% assign linkURL = "https://dl.acm.org/profile/" | append: link.value %}
+                                    {% when "CV" %}
+                                        {% assign linkName = "Curriculum Vitae" %}
+                                        {% assign linkURL = link.value %}
+                                    {% when "dblp" %}
+                                        {% assign linkName = "dblp" %}
+                                        {% assign linkURL = "https://dblp.org/pid/" | append: link.value | append: ".html" %}
+                                    {% when "IEEE" %}
+                                        {% assign linkName = "IEEE" %}
+                                        {% assign linkURL = "https://ieeexplore.ieee.org/author/" | append: link.value %}
+                                    {% when "GitHub" %}
+                                        {% assign linkName = "GitHub" %}
+                                        {% assign linkURL = "https://github.com/" | append: link.value %}
+                                    {% when "GoogleScholar" %}
+                                        {% assign linkName = "Google Scholar" %}
+                                        {% assign linkURL = "https://scholar.google.com/citations?user=" | append: link.value %}
+                                    {% when "LinkedIn" %}
+                                        {% assign linkName = "LinkedIn" %}
+                                        {% assign linkURL = "https://www.linkedin.com/in/" | append: link.value | append: "/" %}
+                                    {% when "ORCID" %}
+                                        {% assign linkName = "ORCID" %}
+                                        {% assign linkURL = "https://orcid.org/" | append: link.value %}
+                                    {% when "ResearchGate" %}
+                                        {% assign linkName = "ResearchGate" %}
+                                        {% assign linkURL = "https://www.researchgate.net/profile/" | append: link.value %}
+                                    {% when "Twitter" or "X" %}
+                                        {% assign linkName = "X" %}
+                                        {% assign linkURL = "https://twitter.com/" | append: link.value %}
+                                    {% when "Website" %}
+                                        {% assign linkName = "Website" %}
+                                        {% assign linkURL = link.value %}
+                                {% endcase %}
+                                {% if linkURL %}
+                                    <li class="contains-{{ link.name | downcase }}">
+                                        <a href="{{ linkURL }}" target="_blank">{{ linkName }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </section>
+            </div>
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,19 @@
+---
+layout: page
+---
+
+{% assign topicFromId = site.data.topics | where: "id", page.topic %}
+{% if topicFromId.size > 0 %}
+    {% assign topic = topicFromId | first %}
+{% else %}
+    {% assign topic = nil %}
+{% endif %}
+
+<span id="set-title">{{ topic.title }}</span>
+
+<div class="columns is-multiline">
+
+    <div class="column is-12">
+        {{ content }}
+    </div>
+</div>

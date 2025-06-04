@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+{% assign toolFromId = site.data.tools | where: "id", page.tool %}
+{% if toolFromId.size > 0 %}
+    {% assign tool = toolFromId | first %}
+{% else %}
+    {% assign tool = nil %}
+{% endif %}
+
+<span id="set-title">{{ tool.name }}</span>
+
+<div class="columns is-multiline">
+
+    <div class="column is-12">
+        {% if tool.logo %}
+            <img class="logo pull-right" src="/assets/areas/tools/{{ tool.logo }}" />
+        {% endif %}
+        {{ content }}
+    </div>
+</div>

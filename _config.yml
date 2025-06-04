@@ -1,0 +1,43 @@
+# Site Settings
+title: Bulma Clean Theme
+tagline: Bulma Clean Theme
+url: "https://www.csrhymes.com"
+
+# Entity Settings
+entity_type: "unit"
+
+organization:
+  unit:
+    name: "Security & Trust"
+    acronym: "ST"
+  center:
+    name: "Center for Cybersecurity"
+    acronym: "CS"
+
+logos:
+  unit:
+    regular:
+      default: "/assets/images/institutional/ST_regular.png"
+      white: "/assets/images/institutional/ST_regular_white.png"
+    symbol:
+      default: "/assets/images/institutional/ST_symbol.png"
+      white: "/assets/images/institutional/ST_symbol_white.png"
+
+content-manager:
+  name: Giuseppe Rossi
+  affiliation: Center for Cybersecurity
+  email: mail@fbk.eu
+  phone: 03900223920809
+
+social:
+  facebook: https://www.facebook.com/
+  github: https://www.facebook.com/
+  instagram: https://www.instagram.com/
+  threads: https://www.threads.net/
+  tiktok: https://www.tiktok.com/
+  x: https://www.x.com/
+  youtube: https://www.youtube.com/
+
+# Other Settings and Defaults
+livereload: true
+#google_analytics: UA-code-here

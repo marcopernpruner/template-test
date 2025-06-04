@@ -1,0 +1,1161 @@
+# Please keep alphabetical order
+
+- id: AaronStump
+  name: Aaron
+  surname: Stump
+
+- id: AchimBrucker
+  name: Achim D.
+  surname: Brucker
+
+- id: AdamJLee
+  name: Adam J.
+  surname: Lee
+  email: adamlee@cs.pitt.edu
+
+- id: AdrienBeaugendre
+  name: Adrien
+  surname: Beaugendre
+
+- id: AgnieszkaKowalska
+  name: Agnieszka
+  surname: Kowalska
+  usernameFBK: akowalska
+
+- id: AlbertoCalvi
+  name: Alberto
+  surname: Calvi
+
+- id: AlbertoSiena
+  name: Alberto
+  surname: Siena
+
+- id: AlessandroArmando
+  name: Alessandro
+  surname: Armando
+  affiliations:
+    - role: Full Professor
+      unit: DIBRIS
+      institution: University of Genoa
+      place: Genoa, Italy
+  email: alessandro.armando@unige.it
+  image: https://rubrica.unige.it/static/foto/VUZDXlxu.jpg
+
+- id: AlessandroBiasi
+  name: Alessandro
+  surname: Biasi
+  usernameFBK: abiasi
+
+- id: AlessandroCarioni
+  name: Alessandro
+  surname: Carioni
+
+- id: AlessandroColombo
+  name: Alessandro
+  surname: Colombo
+
+- id: AlessandroFontana
+  name: Alessandro
+  surname: Fontana
+  usernameFBK: afontana
+
+- id: AlessandroMerlo
+  name: Alessandro
+  surname: Merlo
+
+- id: AlessandroPegoraro
+  name: Alessandro
+  surname: Pegoraro
+  
+- id: AlessandroTomasi
+  name: Alessandro
+  surname: Tomasi
+  email: altomasi@fbk.eu
+  phone: "+390461314506"
+  image: https://aleph.fbk.eu/assets/areas/people/AlessandroTomasi.jpg
+
+- id: AlessioColetta
+  name: Alessio
+  surname: Coletta
+
+- id: AlessioMerlo
+  name: Alessio
+  surname: Merlo
+
+- id: AlessioValenza
+  name: Alessio
+  surname: Valenza
+
+- id: AmirSharif
+  name: Amir
+  surname: Sharif
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: asharif@fbk.eu
+
+- id: AndersonSantanaDeOliveira
+  name: Anderson
+  surname: Santana de Oliveira
+
+- id: AndreaBisegna
+  name: Andrea
+  surname: Bisegna
+  affiliations:
+    - role: Technologist
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: a.bisegna@fbk.eu
+  phone: "+390461314575"
+
+- id: AndreaBissoli
+  name: Andrea
+  surname: Bissoli
+  usernameFBK: abissoli
+
+- id: AndreaBrandolini
+  name: Andrea
+  surname: Brandolini
+
+- id: AndreaDeMaria
+  name: Andrea
+  surname: De Maria
+
+- id: AndreaFlamini
+  name: Andrea
+  surname: Flamini
+
+- id: AndreaMoro
+  name: Andrea
+  surname: Moro
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: anmoro@fbk.eu
+
+- id: AndreaPalmieri
+  name: Andrea
+  surname: Palmieri
+
+- id: AndreaRanalli
+  name: Andrea
+  surname: Ranalli
+  
+- id: AndreaValenza
+  name: Andrea
+  surname: Valenza
+
+- id: AndreasHeiderAviet
+  name: Andreas
+  surname: Heider-Aviet
+
+- id: AnnibalePanichella
+  name: Annibale
+  surname: Panichella
+
+- id: AntoninoSabetta
+  name: Antonino
+  surname: Sabetta
+
+- id: AntonioSchizzerotto
+  name: Antonio
+  surname: Schizzerotto
+
+- id: AvinashSudhodanan
+  name: Avinash
+  surname: Sudhodanan
+
+- id: BiniamFissehaDemissie
+  name: Biniam Fisseha
+  surname: Demissie
+
+- id: BrunoCrispo
+  name: Bruno
+  surname: Crispo
+
+- id: CarlaMerkleWestphall
+  name: Carla Merkle
+  surname: Westphall
+
+- id: CarlosBeckerWestphall
+  name: Carlos Becker
+  surname: Westphall
+
+- id: CarlottaTagliaro
+  name: Carlotta
+  surname: Tagliaro
+
+- id: CeciliaPasquini
+  name: Cecilia
+  surname: Pasquini
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: c.pasquini@fbk.eu
+
+- id: CesareTinelli
+  name: Cesare
+  surname: Tinelli
+
+- id: ChaudhryMuhammadSuleman
+  name: Chaudhry Muhammad
+  surname: Suleman
+
+- id: ChiaraGhidini
+  name: Chiara
+  surname: Ghidini
+
+- id: ChiaraSpadafora
+  name: Chiara
+  surname: Spadafora
+
+- id: ChristianMari
+  name: Christian
+  surname: Mari
+
+- id: ChristopheRingeissen
+  name: Christophe
+  surname: Ringeissen
+
+- id: ChristopherLynch
+  name: Christopher
+  surname: Lynch
+
+- id: ClaraBertolissi
+  name: Clara
+  surname: Bertolissi
+
+- id: ClarkBarrett
+  name: Clark
+  surname: Barrett
+
+- id: ClaudioGrisenti
+  name: Claudio
+  surname: Grisenti
+
+- id: ClaudioPetrazzuolo
+  name: Claudio
+  surname: Petrazzuolo
+
+- id: ClausPahl
+  name: Claus
+  surname: Pahl
+
+- id: DamianoSartori
+  name: Damiano
+  surname: Sartori
+
+- id: DanielDosSantos
+  name: Daniel Ricardo
+  surname: dos Santos
+
+- id: DanielaPöhn
+  name: Daniela
+  surname: Pöhn
+
+- id: DanieleCalvo
+  name: Daniele
+  surname: Calvo
+  usernameFBK: dcalvo
+
+- id: DanieleDelSale
+  name: Daniele
+  surname: Del Sale
+
+- id: DanielFranchini
+  name: Daniel
+  surname: Franchini
+
+- id: DannyRoswinOllik
+  name: Danny Roswin
+  surname: Ollik
+
+- id: DavideModena
+  name: Davide
+  surname: Modena
+
+- id: DavidePiva
+  name: Davide
+  surname: Piva
+
+- id: DavidePizzolotto
+  name: Davide
+  surname: Pizzolotto
+
+- id: DimitriVanLanduyt
+  name: Dimitri
+  surname: Van Landuyt
+
+- id: DomenicoSiracusa
+  name: Domenico
+  surname: Siracusa
+  usernameFBK: dsiracusa
+
+- id: DucKhahnTran
+  name: Duc-Khahn
+  surname: Tran
+
+- id: EdliraDushku
+  name: Edlira
+  surname: Dushku
+
+- id: ElenaPagani
+  name: Elena
+  surname: Pagani
+
+- id: EleonoraMarchesini
+  name: Eleonora
+  surname: Marchesini
+  affiliations:
+    - role: Junior Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: emarchesini@fbk.eu
+
+- id: ElhamArshad
+  name: Elham
+  surname: Arshad
+  usernameFBK: earshad
+
+- id: EmanueleViglianisi
+  name: Emanuele
+  surname: Viglianisi
+  image: https://emavgl.github.io/images/avatar.jpg
+
+- id: EmilianoRizzonelli
+  name: Emiliano
+  surname: Rizzonelli
+
+- id: EnricoCambiaso
+  name: Enrico
+  surname: Cambiaso
+  email: enrico.cambiaso@ieiit.cnr.it
+
+- id: EnricoDonatoni
+  name: Enrico
+  surname: Donatoni
+
+- id: EnricoMarconi
+  name: Enrico
+  surname: Marconi
+
+- id: EricaElia
+  name: Erica
+  surname: Elia
+
+- id: EyasuGetahunChekole
+  name: Eyasu Getahun
+  surname: Chekole
+
+- id: FabioMassacci
+  name: Fabio
+  surname: Massacci
+
+- id: FatihTurkmen
+  name: Fatih
+  surname: Turkmen
+
+- id: FedericaMascia
+  name: Federica
+  surname: Mascia
+
+- id: FedericoCucino
+  name: Federico
+  surname: Cucino
+
+- id: FedericoGraziola
+  name: Federico
+  surname: Graziola
+  usernameFBK: fgraziola
+
+- id: FedericoSinigaglia
+  name: Federico
+  surname: Sinigaglia
+
+- id: FilippoBenedetti
+  name: Filippo
+  surname: Benedetti
+
+- id: FilippoDeGrandi
+  name: Filippo
+  surname: De Grandi
+  usernameFBK: fdegrandi
+
+- id: FilippoGrilli
+  name: Filippo
+  surname: Grilli
+  usernameFBK: fgrilli
+  
+- id: FrancescaGiuliano
+  name: Francesca
+  surname: Giuliano
+
+- id: FrancescoAlberti
+  name: Francesco
+  surname: Alberti
+
+- id: FrancescoAntonioMarino
+  name: Francesco Antonio
+  surname: Marino
+  email: fa.marino@ipzs.it
+
+- id: FrancescoDefilippo
+  name: Francesco
+  surname: Defilippo
+
+- id: GabrieleCosta
+  name: Gabriele
+  surname: Costa
+  email: gabriele.costa@imtlucca.it
+
+- id: GiacomoZanolli
+  name: Giacomo
+  surname: Zanolli
+
+- id: GiadaSciarretta
+  name: Giada
+  surname: Sciarretta
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: g.sciarretta@fbk.eu
+  phone: "+390461312378"
+
+- id: GianfrancoBurzio
+  name: Gianfranco
+  surname: Burzio
+  email: gb@drivesec.com
+
+- id: GianlucaBocci
+  name: Gianluca
+  surname: Bocci
+
+- id: GianlucaSassetti
+  name: Gianluca
+  surname: Sassetti
+  affiliations:
+    - role: PhD Student
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+    - role: PhD Student
+      unit: DIBRIS
+      institution: University of Genoa
+      place: Genoa, Italy
+  email: gsassetti@fbk.eu
+
+- id: GianPaoloRossi
+  name: Gian Paolo
+  surname: Rossi
+
+- id: GiovanniCorti
+  name: Giovanni
+  surname: Corti
+  affiliations:
+    - role: Research Assistant
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: gcorti@fbk.eu
+
+- id: GiovanniFerronato
+  name: Giovanni
+  surname: Ferronato
+
+- id: GiovanniMagoga
+  name: Giovanni
+  surname: Magoga
+
+- id: GiovanniMarchi
+  name: Giovanni
+  surname: Marchi
+
+- id: GiovanniMariaAbbiati
+  name: Giovanni Maria
+  surname: Abbiati
+  email: giovanni.abbiati@unimi.it
+
+- id: GiulioPellizzari
+  name: Giulio
+  surname: Pellizzari
+
+- id: GiuseppeAlessioSciumè
+  name: Giuseppe Alessio
+  surname: Sciumè
+  usernameFBK: gsciume
+
+- id: GiuseppeDeMarco
+  name: Giuseppe
+  surname: De Marco
+
+- id: GiuseppeFarandaCordella
+  name: Giuseppe Faranda
+  surname: Cordella
+  email: gfc@drivesec.com
+  
+- id: GiuseppeLamorgese
+  name: Giuseppe
+  surname: Lamorgese
+
+- id: HamidBerzegar
+  name: Hamid R.
+  surname: Berzegar
+
+- id: HariSiswantoro
+  name: Hari
+  surname: Siswantoro
+
+- id: IonAndyDitu
+  name: Ion Andy
+  surname: Ditu
+  
+- id: IvanMartini
+  name: Ivan
+  surname: Martini
+
+- id: IvanVaccari
+  name: Ivan
+  surname: Vaccari
+  email: ivan.vaccari@ieiit.cnr.it 
+
+- id: IvanValentini
+  name: Ivan
+  surname: Valentini
+
+- id: JerryDenHartog
+  name: Jerry
+  surname: Den Hartog
+
+- id: JosephHeenan
+  name: Joseph
+  surname: Heenan
+  email: joseph@authlete.com
+
+- id: KaleemUllahKaleemUllah
+  name: Kaleem Ullah
+  surname: Kaleem Ullah
+  usernameFBK: kkaleemullah
+
+- id: KonradWrona
+  name: Konrad
+  surname: Wrona
+
+- id: LauraCristiano
+  name: Laura
+  surname: Cristiano
+  email: l.cristiano@fbk.eu
+  
+- id: LeonardoDeMoura
+  name: Leonardo
+  surname: de Moura
+
+- id: LauraPiva
+  name: Laura
+  surname: Piva
+
+- id: LeonardoVicentini
+  name: Leonardo
+  surname: Vicentini
+
+- id: LeonardoXompero
+  name: Leonardo
+  surname: Xompero
+
+- id: LorenzoBellesso
+  name: Lorenzo
+  surname: Bellesso
+
+- id: LorenzoNicolodi
+  name: Lorenzo
+  surname: Nicolodi
+  
+- id: LorenzoTait
+  name: Lorenzo
+  surname: Tait
+
+- id: LorenzoZarantonello
+  name: Lorenzo
+  surname: Zarantonello
+  usernameFBK: lzarantonello
+
+- id: LucaBazzanella
+  name: Luca
+  surname: Bazzanella
+
+- id: LucaCaviglione
+  name: Luca
+  surname: Caviglione
+
+- id: LucaCompagna
+  name: Luca
+  surname: Compagna
+
+- id: LucaMorgese
+  name: Luca
+  surname: Morgese
+  
+- id: LucaVerderame
+  name: Luca
+  surname: Verderame
+
+- id: LucaViganò
+  name: Luca
+  surname: Viganò
+  email: luca.vigano@kcl.ac.uk
+  image: http://www.lucavigano.com/images/LucaVigano2-small.jpg
+
+- id: LucaZanetti
+  name: Luca
+  surname: Zanetti
+
+- id: LuigiDellEva
+  name: Luigi
+  surname: Dell'Eva
+
+- id: LuigiMancini
+  name: Luigi V.
+  surname: Mancini
+
+- id: LwinKhinShar
+  name: Lwin Khin
+  surname: Shar
+
+- id: MajidMollaeefar
+  name: Majid
+  surname: Mollaeefar
+  email: mmollaeefar@fbk.eu
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+
+- id: MarcoCentenaro
+  name: Marco
+  surname: Centenaro
+  email: mcentenaro@fbk.eu
+
+- id: MarcoFrassoni
+  name: Marco
+  surname: Frassoni
+  usernameFBK: frassoni
+
+- id: MarcoPernpruner
+  name: Marco
+  surname: Pernpruner
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: mpernpruner@fbk.eu
+  phone: "+390461314337"
+
+- id: MarianoCeccato
+  name: Mariano
+  surname: Ceccato
+  email: mariano.ceccato@univr.it
+  image: https://www.di.univr.it/documenti/Persona/foto/foto347921.jpg
+
+- id: MarioRaciti
+  name: Mario
+  surname: Raciti
+  affiliations:
+    - role: Visiting PhD Student
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: mraciti@fbk.eu
+
+- id: MarioScuro
+  name: Mario
+  surname: Scuro
+
+- id: MartaArisi
+  name: Marta
+  surname: Arisi
+
+- id: MartaToniolli
+  name: Marta
+  surname: Toniolli
+
+- id: MartinaVecellioReane
+  name: Martina
+  surname: Vecellio Reane
+
+- id: MassimilianoZanchiello
+  name: Massimiliano
+  surname: Zanchiello
+
+- id: MassimoMerro
+  name: Massimo
+  surname: Merro
+  email: massimo.merro@univr.it
+
+- id: MatildeSalaorni
+  name: Matilde
+  surname: Salaorni
+
+- id: MatteoBitussi
+  name: Matteo
+  surname: Bitussi
+  usernameFBK: mbitussi
+
+- id: MatteoBregola
+  name: Matteo
+  surname: Bregola
+
+- id: MatteoFranzil
+  name: Matteo
+  surname: Franzil
+
+- id: MatteoGrasso
+  name: Matteo
+  surname: Grasso
+
+- id: MatteoLeonelli
+  name: Matteo
+  surname: Leonelli
+  
+- id: MatteoLongato
+  name: Matteo
+  surname: Longato
+
+- id: MatteoPaoloFurlan
+  name: Matteo Paolo
+  surname: Furlan
+
+- id: MatteoRanzi
+  name: Matteo
+  surname: Ranzi
+  
+- id: MatteoRizzi
+  name: Matteo
+  surname: Rizzi
+  affiliations:
+    - role: Security Specialist Officer
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: mrizzi@fbk.eu
+  phone: "+390461312356"
+
+- id: MattiaAndreolli
+  name: Mattia
+  surname: Andreolli
+
+- id: MattiaBressan
+  name: Mattia
+  surname: Bressan
+  usernameFBK: mbressan
+
+- id: MattiaConci
+  name: Mattia
+  surname: Conci
+
+- id: MattiaMaramotti
+  name: Mattia
+  surname: Maramotti
+  usernameFBK: mmaramotti
+  
+- id: MauroConti
+  name: Mauro
+  surname: Conti
+
+- id: MdMasoomRabbani
+  name: Md Masoom
+  surname: Rabbani
+
+- id: MicheleBarletta
+  name: Michele
+  surname: Barletta
+
+- id: MicheleBezzi
+  name: Michele
+  surname: Bezzi
+
+- id: MicheleZucchelli
+  name: Michele
+  surname: Zucchelli
+
+- id: MircoBisoffi
+  name: Mirco
+  surname: Bisoffi
+
+- id: MirkoSchicchi
+  name: Mirko
+  surname: Schicchi
+
+- id: MojtabaEskandari
+  name: Mojtaba
+  surname: Eskandari
+
+- id: MorenoAmbrosin
+  name: Moreno
+  surname: Ambrosin
+
+- id: MuhammadImran
+  name: Muhammad
+  surname: Imran
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: mimran@fbk.eu
+
+- id: NabilElIoini
+  name: Nabil
+  surname: El Ioini
+
+- id: NadiaMetoui
+  name: Nadia
+  surname: Metoui
+
+- id: NatashaSharygina
+  name: Natasha
+  surname: Sharygina
+
+- id: NiccolòLechthaler
+  name: Niccolò
+  surname: Lechthaler
+  usernameFBK: nnlechthaler
+
+- id: NicolaCasagrande
+  name: Nicola
+  surname: Casagrande
+
+- id: NicolaZannone
+  name: Nicola
+  surname: Zannone
+
+- id: NicolasDolgin
+  name: Nicolas
+  surname: Dolgin
+
+- id: NicolòMicheletti
+  name: Nicolò
+  surname: Micheletti
+
+- id: NizarNadif
+  name: Nizar
+  surname: Nadif
+  usernameFBK: nnadif
+
+- id: PallaviKaliyar
+  name: Pallavi
+  surname: Kaliyar
+
+- id: PaoloGuarda
+  name: Paolo
+  surname: Guarda
+
+- id: PaoloPrem
+  name: Paolo
+  surname: Prem
+
+- id: PierGuidoSeno
+  name: Pier Guido
+  surname: Seno
+  usernameFBK: pseno
+
+- id: PietroDeMatteis
+  name: Pietro 
+  surname: De Matteis
+  usernameFBK: pdematteis
+
+- id: RayhanaTaoufik
+  name: Rayhana
+  surname: Taoufik
+
+- id: RiccardoDeMasellis
+  name: Riccardo
+  surname: De Masellis
+
+- id: RiccardoGermenia
+  name: Riccardo
+  surname: Germenia
+  affiliations:
+    - role: Research Assistant
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: rgermenia@fbk.eu
+
+- id: RiccardoLazzaretti
+  name: Riccardo
+  surname: Lazzaretti
+
+- id: RiccardoLongo
+  name: Riccardo
+  surname: Longo
+  email: rlongo@fbk.eu
+
+- id: RiccardoLussana
+  name: Riccardo
+  surname: Lussana
+  usernameFBK: rlussana
+
+- id: RiccardoTraverso
+  name: Riccardo
+  surname: Traverso
+
+- id: RiccardoZiglio
+  name: Riccardo
+  surname: Ziglio
+  affiliations:
+    - role: PhD Student
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+    - role: PhD Student
+      unit: DIBRIS
+      institution: University of Genoa
+      place: Genoa, Italy
+  email: rziglio@fbk.eu
+
+- id: RobertaPeracchio
+  name: Roberta
+  surname: Peracchio
+
+- id: RobertoBruttomesso
+  name: Roberto
+  surname: Bruttomesso
+
+- id: RobertoCarbone
+  name: Roberto
+  surname: Carbone
+  affiliations:
+    - role: Head of Unit
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: carbone@fbk.eu
+  phone: "+390461314185"
+
+- id: RobertoRiggio
+  name: Roberto
+  surname: Riggio
+  email: rriggio@fbk.eu
+
+- id: RobertoSavi
+  name: Roberto
+  surname: Savi
+  usernameFBK: rsavi
+
+- id: RobertoTiella
+  name: Roberto
+  surname: Tiella
+  email: tiella@fbk.eu
+
+- id: RoccoMammoliti
+  name: Rocco
+  surname: Mammoliti
+  
+- id: RupertGobber
+  name: Rupert
+  surname: Gobber
+
+- id: SalimehDashti
+  name: Salimeh
+  surname: Dashti
+
+- id: SalvatoreManfredi
+  name: Salvatore
+  surname: Manfredi
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: smanfredi@fbk.eu
+  phone: "+390461314193"
+
+- id: SanderOudkerk
+  name: Sander
+  surname: Oudkerk
+
+- id: SaraSorrentino
+  name: Sara
+  surname: Sorrentino
+  usernameFBK: ssorrentino
+
+- id: SaverioTuretta
+  name: Saverio
+  surname: Turetta
+
+- id: SerenaPonta
+  name: Serena Elisa
+  surname: Ponta
+
+- id: SergiiKushch
+  name: Sergii
+  surname: Kushch
+
+- id: SergioManuelNobregaGoncalves
+  name: Sergio Manuel
+  surname: Nóbrega Gonçalves
+
+- id: SilvioCretti
+  name: Silvio
+  surname: Cretti
+
+- id: SilvioGhilardi
+  name: Silvio
+  surname: Ghilardi
+
+- id: SilviaRicciuti
+  name: Silvia
+  surname: Ricciuti
+
+- id: SilvioRanise
+  name: Silvio
+  surname: Ranise
+  affiliations:
+    - role: Director of Center
+      unit: Center for Cybersecurity
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+    - role: Full Professor
+      unit: Department of Mathematics
+      institution: University of Trento
+      place: Trento, Italy
+  email: ranise@fbk.eu
+  phone: "+390461314192"
+
+- id: SimonaStoklin
+  name: Simona
+  surname: Stoklin
+
+- id: SimoneAvancini
+  name: Simone
+  surname: Avancini
+  usernameFBK: savancini
+
+- id: SimoneBrunello
+  name: Simone
+  surname: Brunello
+  affiliations:
+    - role: Research Assistant
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: sbrunello@fbk.eu
+
+- id: SofiaPuttin
+  name: Sofia
+  surname: Puttin
+
+- id: SofiaZanrosso
+  name: Sofia
+  surname: Zanrosso
+
+- id: SoniaEccher
+  name: Sonia
+  surname: Eccher
+
+- id: StanislavDashevskyi
+  name: Stanislav
+  surname: Dashevskyi
+
+- id: StefanoBerlato
+  name: Stefano
+  surname: Berlato
+  email: sberlato@fbk.eu
+
+- id: StefanoCamposilvan
+  name: Stefano
+  surname: Camposilvan
+  usernameFBK: scamposilvan
+
+- id: StefanoDaRoit
+  name: Stefano
+  surname: Da Roit
+
+- id: StefanoFacchini
+  name: Stefano
+  surname: Facchini
+
+- id: TahirAhmad
+  name: Tahir
+  surname: Ahmad
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: ahmad@fbk.eu
+
+- id: ThanhTungNguyen
+  name: Thanh-Tung
+  surname: Nguyen 
+
+- id: TuanAnhTruong
+  name: Tuan Anh
+  surname: Truong
+  email: anhtt@cse.hcmut.edu.vn
+
+- id: UmbertoMorelli
+  name: Umberto
+  surname: Morelli
+  affiliations:
+    - role: Technologist
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: umorelli@fbk.eu
+  phone: "+390461312377"
+
+- id: ValentinaOdorizzi
+  name: Valentina
+  surname: Odorizzi
+
+- id: VanThanhLe
+  name: Van Thanh
+  surname: Le
+
+- id: VeronicaCristiano
+  name: Veronica
+  surname: Cristiano
+  
+- id: VincenzoChiarini
+  name: Vincenzo
+  surname: Chiarini
+
+- id: WendyBarreto
+  name: Wendy
+  surname: Barreto
+
+- id: WolfgangHommel
+  name: Wolfgang
+  surname: Hommel
+
+- id: WorachetUttha
+  name: Worachet
+  surname: Uttha
+
+- id: YuriTomasini
+  name: Yuri
+  surname: Tomasini
+
+- id: ZahraEbadiAnsaroudi
+  name: Zahra
+  surname: Ebadi Ansaroudi
+  affiliations:
+    - role: Researcher
+      unit: Security & Trust
+      institution: Fondazione Bruno Kessler
+      place: Trento, Italy
+  email: zebadiansaroudi@fbk.eu
+
+# Please keep alphabetical order

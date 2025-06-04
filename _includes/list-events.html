@@ -1,0 +1,32 @@
+{% assign source = include.source %}
+
+{% if source and source.size > 0 %}
+    {% assign events = "" | split: "" %}
+    {% for item in source %}
+        {% if item.id %}
+            {% assign match = site.data.events | where: "id", item.id | first %}
+        {% else %}
+            {% assign match = site.data.events | where: "id", item | first %}
+        {% endif %}
+        {% if match %}
+            {% assign events = events | push: match %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign events = events | sort_natural: "startDate" | reverse %}
+
+    <div class="events">
+        <ul>
+            {%- for event in events -%}
+                <li class="item event">
+                    <a href="{{ event.url }}"><b>{{ event.name }}</b></a>{% if event.acronym %} ({{ event.acronym }}){% endif %}, {% if event.startDate != event.endDate %}from {{ event.startDate | date: "%B %e, %Y" }} to {{ event.endDate | date: "%B %e, %Y" }}{% else %}{{ event.startDate | date: "%B %e, %Y" }}{% endif %}
+                    {% if event.description %}
+                    <ul class="description">
+                        <li>{{ event.description }}</li>
+                    </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
