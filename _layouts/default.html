@@ -37,19 +37,11 @@
                     {% endif %}
                     <div class="column {{ content_width }}">
                         {% include tabs.html %}
-                        {% include showcase.html %}
-                        {% include sponsors.html %}
-                        {% include gallery.html %}
                         {{ content }}
                     </div>
                     {% if page.menubar or page.menubarlist %}
                         <div class="column is-3-desktop is-3-tablet">
                             {% include menubar.html %}
-                        </div>
-                    {% endif %}
-                    {% if site.posts and page.show_sidebar %}
-                        <div class="column is-3-desktop is-3-tablet">
-                            {% include latest-posts.html %}
                         </div>
                     {% endif %}
                 </div>

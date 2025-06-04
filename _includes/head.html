@@ -40,7 +40,7 @@
 
     <style>
         :root {
-            --logo-default: url('{% if site.entity_type == "unit" %}{{ site.logos.unit.symbol.default | default: site.logos.unit.regular.default }}{% elsif site.entity_type == "center" %}}{{ site.data.defaults.logos.center.symbol.default | default: site.data.defaults.logos.center.regular.default }}{% endif %}');
+            --logo-default: url('{% if site.entity_type == "unit" %}{{ site.logos.unit.symbol.default | default: site.logos.unit.regular.default }}{% elsif site.entity_type == "center" %}}/assets/images/institutional/CS_regular.png{% endif %}');
             --primary-light: {{ site.primary_color_light | default: "#0068b4" }};
             --primary-dark: {{ site.primary_color_dark | default: "#02406e" }};
         }

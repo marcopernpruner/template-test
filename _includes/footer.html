@@ -16,8 +16,8 @@
             <div class="column has-text-centered is-3-desktop is-3-tablet is-hidden-mobile">
                 {% if site.entity_type == "unit" and site.logos.unit %}
                     <img class="logo" src="{{ site.logos.unit.regular.default }}" />
-                {% elsif site.entity_type == "center" and site.data.defaults.logos.center %}
-                    <img class="logo" src="{{ site.data.defaults.logos.center.regular.default }}" />
+                {% elsif site.entity_type == "center" %}
+                    <img class="logo" src="/assets/images/institutional/CS_regular.png" />
                 {% endif %}
             </div>
 
@@ -54,8 +54,8 @@
             </div>
 
             <div class="column has-text-centered is-3-desktop is-3-tablet is-hidden-mobile">
-                {% if site.entity_type == "unit" and site.data.defaults.logos.center %}
-                    <img class="logo" src="{{ site.data.defaults.logos.center.regular.default }}" />
+                {% if site.entity_type == "unit" %}
+                    <img class="logo" src="/assets/images/institutional/CS_regular.png" />
                 {% endif %}
             </div>
 
@@ -65,14 +65,14 @@
                         <div class="column has-text-centered is-12-mobile">
                             <img class="logo" src="{{ site.logos.unit.regular.default }}" />
                         </div>
-                    {% elsif site.entity_type == "center" and site.data.defaults.logos.center %}
+                    {% elsif site.entity_type == "center" %}
                         <div class="column has-text-centered is-12-mobile">
-                            <img class="logo" src="{{ site.data.defaults.logos.center.regular.default }}" />
+                            <img class="logo" src="/assets/images/institutional/CS_regular.png" />
                         </div>
                     {% endif %}
-                    {% if site.entity_type == "unit" and site.data.defaults.logos.center %}
+                    {% if site.entity_type == "unit" %}
                         <div class="column has-text-centered is-12-mobile">
-                            <img class="logo" src="{{ site.data.defaults.logos.center.regular.default }}" />
+                            <img class="logo" src="/assets/images/institutional/CS_regular.png" />
                         </div>
                     {% endif %}
                 </div>
