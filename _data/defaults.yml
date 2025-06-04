@@ -1,0 +1,9 @@
+logos:
+  center:
+    regular:
+      default: "/assets/images/institutional/CS_regular.png"
+      white: "/assets/images/institutional/CS_regular_white.png"
+  main:
+    regular:
+      default: "/assets/images/institutional/FBK_regular.png"
+      white: "/assets/images/institutional/FBK_regular_white.png"

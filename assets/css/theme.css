@@ -1,7 +1,18 @@
 :root {
   --primary: var(--primary-light);
   --link-color: var(--primary-light);
-  --bulma-link-text: var(--link-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+.hero.is-primary {
+  background-color: hsl(205deg, 100%, 35%);
+}
+
+.hero.is-bold {
+  linear-gradient(141deg, hsl(calc(var(--bulma-hero-h) - 5deg), calc(var(--bulma-hero-s) + 10%), calc(var(--bulma-hero-background-l) + 5%)) 0%, hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-background-l)) 71%, hsl(calc(var(--bulma-hero-h) + 5deg), calc(var(--bulma-hero-s) - 10%), calc(var(--bulma-hero-background-l) - 5%)) 100%)
 }
 
 .menu-list a.is-active {
@@ -950,15 +961,74 @@ table.program td p.location::before {
     --link-color: var(--primary-light);
   }
 
+  body,
+  .menu a {
+    color: hsl(221deg, 14%, 71%) !important;
+  }
+
+  section {
+    background-color: hsl(221, 14%, 11%) !important;
+  }
+
+  .button {
+    background-color: hsl(221, 14%, calc(9% + 5%)) !important;
+    border-color: hsl(221, 14%, calc(24% + 10%)) !important;
+    color: hsl(221, 14%, 93%) !important;
+  }
+
+  .contents {
+    box-shadow: 0 0.5em 1em -0.125em hsla(0deg, 0%, 100%, 0.1), 0 0px 0 1px hsla(0deg, 0%, 100%, 0.02) !important;
+  }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6,
+  .menu p {
+    color: hsl(221deg, 14%, 93%) !important;
+  }
+
   .navbar {
-    background-color: var(--primary);
+    background-color: var(--primary) !important;
   }
 
   .hero.is-primary {
-    background-color: var(--primary);
+    background-color: var(--primary) !important;
   }
 
   .hero.is-primary.is-bold {
     background-image: none;
+  }
+
+  .footer {
+    background-color: hsl(221, 14%, 14%) !important;
+  }
+
+  .content table td, .content table th {
+    border: 1px solid hsl(221, 14%, 24%) !important;
+    border-width: 0 0 1px !important;
+  }
+
+  .content table thead td, .content table thead th {
+    color: hsl(221deg, 14%, 93%) !important;
+  }
+
+  .card {
+    background-color: hsl(221, 14%, 9%) !important;
+    color: hsl(221deg, 14%, 71%) !important;
+  }
+
+  .card .title {
+    color: hsl(221deg, 14%, 93%) !important;
+  }
+
+  .card .subtitle {
+    color: hsl(221deg, 14%, 71%) !important;
+  }
+
+  hr {
+    background-color: hsl(221, 14%, 14%) !important;
   }
 }

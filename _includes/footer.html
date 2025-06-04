@@ -16,8 +16,8 @@
             <div class="column has-text-centered is-3-desktop is-3-tablet is-hidden-mobile">
                 {% if site.entity_type == "unit" and site.logos.unit %}
                     <img class="logo" src="{{ site.logos.unit.regular.default }}" />
-                {% elsif site.entity_type == "center" and site.logos.center %}
-                    <img class="logo" src="{{ site.logos.center.regular.default }}" />
+                {% elsif site.entity_type == "center" and data.defaults.logos.center %}
+                    <img class="logo" src="{{ data.defaults.logos.center.regular.default }}" />
                 {% endif %}
             </div>
 
@@ -54,8 +54,8 @@
             </div>
 
             <div class="column has-text-centered is-3-desktop is-3-tablet is-hidden-mobile">
-                {% if site.entity_type == "unit" and site.logos.center %}
-                    <img class="logo" src="{{ site.logos.center.regular.default }}" />
+                {% if site.entity_type == "unit" and data.defaults.logos.center %}
+                    <img class="logo" src="{{ data.defaults.logos.center.regular.default }}" />
                 {% endif %}
             </div>
 
@@ -65,14 +65,14 @@
                         <div class="column has-text-centered is-12-mobile">
                             <img class="logo" src="{{ site.logos.unit.regular.default }}" />
                         </div>
-                    {% elsif site.entity_type == "center" and site.logos.center %}
+                    {% elsif site.entity_type == "center" and data.defaults.logos.center %}
                         <div class="column has-text-centered is-12-mobile">
-                            <img class="logo" src="{{ site.logos.center.regular.default }}" />
+                            <img class="logo" src="{{ data.defaults.logos.center.regular.default }}" />
                         </div>
                     {% endif %}
-                    {% if site.entity_type == "unit" and site.logos.center %}
+                    {% if site.entity_type == "unit" and data.defaults.logos.center %}
                         <div class="column has-text-centered is-12-mobile">
-                            <img class="logo" src="{{ site.logos.center.regular.default }}" />
+                            <img class="logo" src="{{ data.defaults.logos.center.regular.default }}" />
                         </div>
                     {% endif %}
                 </div>
