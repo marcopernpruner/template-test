@@ -26,7 +26,7 @@
             {% assign url = nil %}
             {% if project.url %}
                 {% if site.entity_type == "unit" %}
-                    {% assign url = project.url.unit | default: project.url.center | default: nil %}
+                    {% assign url = project.url.unit | default: (project.url.center | append: organization.center.website) | default: nil %}
                 {% elsif site.entity_type == "center" %}
                     {% assign url = default: project.url.center | default: nil %}
                 {% endif %}
