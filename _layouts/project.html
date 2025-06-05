@@ -16,8 +16,18 @@ layout: page
 
 <div class="columns project is-multiline">
     <div class="column overview is-12">
+        {% if site.entity_type == "unit" and project.url.center %}
+            <div class="notification is-warning">
+                <p>A general description is available on the <a href="{{ project.url.center | prepend: site.organization.center.website }}">website of the Center</a>.</p>
+            </div>
+        {% endif %}
         {% if project.logo %}
-            <img class="logo pull-right" src="/assets/areas/projects/{{ project.logo }}" />
+            {% assign checkURL = project.logo | split: "http" %}
+            {% if checkURL.size > 0 and checkURL[0] == "" %}
+                <img class="logo pull-right" src="{{ project.logo }}" />
+            {% else %}
+                <img class="logo pull-right" src="/assets/areas/projects/{{ project.logo }}" />
+            {% endif %}
         {% endif %}
         {% if content.size > 1 %}
             <h1 id="title-overview">Overview</h1>

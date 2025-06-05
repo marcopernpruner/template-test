@@ -23,14 +23,30 @@
         {% endif %}
 
         {% for project in projects %}
+            {% assign url = nil %}
+            {% if project.url %}
+                {% if site.entity_type == "unit" %}
+                    {% assign url = project.url.unit | default: project.url.center | default: nil %}
+                {% elsif site.entity_type == "center" %}
+                    {% assign url = default: project.url.center | default: nil %}
+                {% endif %}
+            {% endif %}
+
             {% if style == "card" %}
                 <div class="column is-3-desktop is-4-tablet project">
-                    <a href="{{ project.url }}">
+                    {% if url %}
+                    <a href="{{ url }}">
+                    {% endif %}
                         <div class="card project">
                             <div class="card-image">
                                 <figure class="image">
                                     {% if project.logo %}
-                                        <img src="{{ site.baseurl }}/assets/areas/projects/{{ project.logo }}" alt="{{ project.title }}">
+                                        {% assign checkURL = project.logo | split: "http" %}
+                                        {% if checkURL.size > 0 and checkURL[0] == "" %}
+                                            <img src="{{ project.logo }}" alt="{{ project.title }}">
+                                        {% else %}
+                                            <img src="/assets/areas/projects/{{ project.logo }}" alt="{{ project.title }}">
+                                        {% endif %}
                                     {% else %}
                                         <img class="default" alt="{{ project.title }}">
                                     {% endif %}
@@ -43,11 +59,19 @@
                                 {% endif %}
                             </div>
                         </div>
+                    {% if url %}
                     </a>
+                    {% endif %}
                 </div>
             {% elsif style == "list" %}
                 <li class="item project">
-                    <a href="{{ project.url }}"><b>{{ project.title }}</b></a>
+                    {% if url %}
+                    <a href="{{ url }}">
+                    {% endif %}
+                        <b>{{ project.title }}</b>
+                    {% if url %}
+                    </a>
+                    {% endif %}
                     {% if project.titleAddon %} ({{ project.titleAddon }}){% endif %}
                 </li>
             {% endif %}

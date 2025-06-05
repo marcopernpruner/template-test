@@ -28,9 +28,18 @@
     {% endif %}
 
     {% for tool in tools %}
-        {%- assign linksArray = "" | split: "" -%}
+        {% assign urlDocumentation = nil %}
         {% if tool.urlDocumentation %}
-            {%- assign string = '<a href="' | append: tool.urlDocumentation | append: '">documentation</a>' -%}
+            {% if site.entity_type == "unit" %}
+                {% assign urlDocumentation = tool.urlDocumentation.unit | default: tool.urlDocumentation.center | default: tool.urlDocumentation.external | default: nil %}
+            {% elsif site.entity_type == "center" %}
+                {% assign urlDocumentation = default: tool.urlDocumentation.center | default: tool.urlDocumentation.external | default: nil %}
+            {% endif %}
+        {% endif %}
+
+        {%- assign linksArray = "" | split: "" -%}
+        {% if urlDocumentation %}
+            {%- assign string = '<a href="' | append: urlDocumentation | append: '">documentation</a>' -%}
             {%- assign linksArray = linksArray | push: string -%}
         {% endif %}
         {% if tool.urlCode %}
@@ -46,12 +55,19 @@
 
         {% if style == "card" %}
             <div class="column is-3-desktop is-4-tablet tool">
-                <a href="{{ tool.urlDocumentation }}">
+                {% if urlDocumentation %}
+                <a href="{{ urlDocumentation }}">
+                {% endif %}
                     <div class="card tool">
                         <div class="card-image">
                             <figure class="image">
                                 {% if tool.logo %}
-                                    <img src="{{ site.baseurl }}/assets/areas/tools/{{ tool.logo }}" alt="{{ tool.name }}">
+                                    {% assign checkURL = tool.logo | split: "http" %}
+                                    {% if checkURL.size > 0 and checkURL[0] == "" %}
+                                        <img src="{{ tool.logo }}" alt="{{ project.title }}">
+                                    {% else %}
+                                        <img src="/assets/areas/projects/{{ tool.logo }}" alt="{{ project.title }}">
+                                    {% endif %}
                                 {% else %}
                                     <img class="default" alt="{{ tool.name }}">
                                 {% endif %}
@@ -68,7 +84,9 @@
                             {% endif %}
                         </div>
                     </div>
+                {% if urlDocumentation %}
                 </a>
+                {% endif %}
             </div>
         {% elsif style == "list" %}
             <li class="item tool">

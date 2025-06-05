@@ -14,8 +14,18 @@ layout: page
 <div class="columns is-multiline">
 
     <div class="column is-12">
+        {% if site.entity_type == "unit" and tool.urlDocumentation.center %}
+            <div class="notification is-warning">
+                <p>A general description is available on the <a href="{{ tool.urlDocumentation.center | prepend: site.organization.center.website }}">website of the Center</a>.</p>
+            </div>
+        {% endif %}
         {% if tool.logo %}
-            <img class="logo pull-right" src="/assets/areas/tools/{{ tool.logo }}" />
+            {% assign checkURL = tool.logo | split: "http" %}
+            {% if checkURL.size > 0 and checkURL[0] == "" %}
+                <img class="logo pull-right" src="{{ tool.logo }}" />
+            {% else %}
+                <img class="logo pull-right" src="/assets/areas/projects/{{ tool.logo }}" />
+            {% endif %}
         {% endif %}
         {{ content }}
     </div>
