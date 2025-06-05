@@ -780,6 +780,31 @@ li.item .description {
   padding: 10px;
 }
 
+.university-project .information {
+  border: 1px solid #c7c7c7;
+  font-size: small;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.university-project .information p:not(:last-child),
+.university-project .description p:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.university-project .description {
+  margin-bottom: 1em;
+}
+
+.university-projects-call-header {
+  margin-bottom: 30px;
+}
+
+.university-projects-call-text {
+  border: 1px solid #c7c7c7;
+  padding: 10px;
+}
+
 .dot {
   margin-left: 5px;
   height: 15px;
