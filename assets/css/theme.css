@@ -1036,3 +1036,31 @@ table.program td p.location::before {
     background-color: hsl(221, 14%, 14%) !important;
   }
 }
+/* END DARK THEME */
+
+/* RESEARCH UNITS TAGS */
+.tag.tag-aleph {
+  background-color: #c44c4c;
+  color: #FFF;
+}
+
+.tag.tag-daisy {
+  background-color: #7cb9e8;
+  color: #FFF;
+}
+
+.tag.tag-rising {
+  background-color: #3e7da6;
+  color: #FFF;
+}
+
+.tag.tag-safeware {
+  background-color: #f4a261;
+  color: #FFF;
+}
+
+.tag.tag-st {
+  background-color: #8db53d;
+  color: #FFF;
+}
+/* END RESEARCH UNITS TAGS */

@@ -8,14 +8,6 @@
         {% assign source = source | sort: "applicationEnd" %}
     {% endif %}
 
-    {% assign peopleList = "" | split: "" %}
-    {% assign peopleFilesList = site.data.people | sort %}
-    {% for file in peopleFilesList %}
-        {% for person in file[1] %}
-            {% assign peopleList = peopleList | push: person %}
-        {% endfor %}
-    {% endfor %}
-
     <div class="university-projects">
         {% for project in source %}
             {% assign unitsFromId = "" | split: "" %}
@@ -67,11 +59,11 @@
             {% if project.supervisor %}
                 {% if project.supervisor | first %}
                     {% for supervisor in project.supervisor %}
-                        {% assign supervisorFromId = peopleList | where: "id", supervisor | where_exp: "supervisor", "supervisor.affiliations.size > 0" %}
+                        {% assign supervisorFromId = site.data.people | where: "id", supervisor | where_exp: "supervisor", "supervisor.affiliations.size > 0" %}
                         {% assign supervisorsFromId = supervisorsFromId | push: supervisorFromId[0] %}
                     {% endfor %}
                 {% else %}
-                    {% assign supervisorFromId = peopleList | where: "id", project.supervisor | where_exp: "supervisor", "supervisor.affiliations.size > 0" %}
+                    {% assign supervisorFromId = site.data.people | where: "id", project.supervisor | where_exp: "supervisor", "supervisor.affiliations.size > 0" %}
                     {% assign supervisorsFromId = supervisorsFromId | concat: supervisorFromId[0] %}
                 {% endif %}
             {% endif %}
