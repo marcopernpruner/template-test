@@ -31,9 +31,9 @@
         {% assign urlDocumentation = nil %}
         {% if tool.urlDocumentation %}
             {% if site.entity_type == "unit" %}
-                {% assign urlDocumentation = tool.urlDocumentation.unit | default: (tool.urlDocumentation.center | append: organization.center.website) | default: tool.urlDocumentation.external | default: nil %}
+                {% assign urlDocumentation = tool.urlDocumentation.unit | default: (tool.urlDocumentation.center | prepend: site.organization.center.website) | default: tool.urlDocumentation.external | default: nil %}
             {% elsif site.entity_type == "center" %}
-                {% assign urlDocumentation = default: tool.urlDocumentation.center | default: tool.urlDocumentation.external | default: nil %}
+                {% assign urlDocumentation = tool.urlDocumentation.center | default: tool.urlDocumentation.external | default: nil %}
             {% endif %}
         {% endif %}
 
