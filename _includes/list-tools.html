@@ -31,9 +31,19 @@
         {% assign urlDocumentation = nil %}
         {% if tool.urlDocumentation %}
             {% if site.entity_type == "unit" %}
-                {% assign urlDocumentation = tool.urlDocumentation.unit | default: (tool.urlDocumentation.center | prepend: site.organization.center.website) | default: tool.urlDocumentation.external | default: nil %}
+                {% if tool.urlDocumentation.unit %}
+                    {% assign urlDocumentation = tool.urlDocumentation.unit %}
+                {% elsif tool.urlDocumentation.center %}
+                    {% assign urlDocumentation = tool.urlDocumentation.center | prepend: site.organization.center.website %}
+                {% elsif tool.urlDocumentation.external %}
+                    {% assign urlDocumentation = tool.urlDocumentation.external %}
+                {% endif %}
             {% elsif site.entity_type == "center" %}
-                {% assign urlDocumentation = tool.urlDocumentation.center | default: tool.urlDocumentation.external | default: nil %}
+                {% if tool.urlDocumentation.center %}
+                    {% assign urlDocumentation = tool.urlDocumentation.center %}
+                {% elsif tool.urlDocumentation.external %}
+                    {% assign urlDocumentation = tool.urlDocumentation.external %}
+                {% endif %}
             {% endif %}
         {% endif %}
 

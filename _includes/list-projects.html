@@ -21,14 +21,24 @@
             <div class="column is-12-desktop is-12-tablet">
                 <ul>
         {% endif %}
-
+        
         {% for project in projects %}
             {% assign url = nil %}
             {% if project.url %}
                 {% if site.entity_type == "unit" %}
-                    {% assign url = project.url.unit | default: (project.url.center | prepend: site.organization.center.website) | default: nil %}
+                    {% if project.url.unit %}
+                        {% assign url = project.url.unit %}
+                    {% elsif project.url.center %}
+                        {% assign url = project.url.center | prepend: site.organization.center.website %}
+                    {% elsif project.url.external %}
+                        {% assign url = project.url.external %}
+                    {% endif %}
                 {% elsif site.entity_type == "center" %}
-                    {% assign url = project.url.center | default: nil %}
+                    {% if project.url.center %}
+                        {% assign url = project.url.center %}
+                    {% elsif project.url.external %}
+                        {% assign url = project.url.external %}
+                    {% endif %}
                 {% endif %}
             {% endif %}
 

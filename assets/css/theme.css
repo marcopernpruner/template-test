@@ -167,6 +167,15 @@ li.bio {
   color: var(--primary);
 }
 
+.filter.filter-tag {
+  margin: 2px;
+  cursor: pointer;
+}
+
+.filter-unselected {
+  opacity: 0.3;
+}
+
 /* TITLES */
 .content h1 {
   font-size: 1.7em;

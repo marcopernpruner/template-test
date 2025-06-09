@@ -29,4 +29,11 @@ layout: page
         {% endif %}
         {{ content }}
     </div>
+
+    {% if site.entity_type == "center" and project.url.units %}
+        <div class="column units-details is-12">
+            <h1 id="title-units-details">Details on the Units' Websites</h1>
+            {% include list-unit-links.html source=tool.urlDocumentation.units %}
+        </div>
+    {% endif %}
 </div>

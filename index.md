@@ -18,5 +18,3 @@ In line with the mission of [Fondazione Bruno Kessler](https://www.fbk.eu/en) (F
 # In the Spotlight
 {% assign spotlights = site.data.topics | where_exp: "topic", "topic.category == 'spotlight'" %}
 {% include list-topics.html source=spotlights %}
-
-{{ site.data.defaults }}

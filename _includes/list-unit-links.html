@@ -1,6 +1,6 @@
 {% assign source = include.source %}
-{% assign sort = include.sort %}
 {% assign cols = include.cols %}
+{% assign sort = include.sort | default: nil %}
 
 {% if source and source.size > 0 %}
     {% assign units = "" | split: "" %}
@@ -25,18 +25,11 @@
 
     <div class="columns is-multiline">
         {% for unit in units %}
-            {% assign head = nil %}
-            {%- if unit.head -%}
-                {% assign headFromId = site.data.people | where: "id", unit.head %}
-                {% if headFromId %}
-                    {% assign head = headFromId[0]["name"] | append: " " | append: headFromId[0]["surname"] %}
-                {% endif %}
-            {%- endif -%}
-            
-            <div class="column is-{% if cols %}{{ cols }}{% else %}one-fifth{% endif %}-desktop is-4-tablet">
-                {% if unit.website %}
-                    <a href="{{ unit.website }}">
-                        {% endif %}
+            {% assign currentLink = source | where: "id", unit.id | first %}
+
+            {% if currentLink and currentLink.size > 0 %}
+                <div class="column is-{% if cols %}{{ cols }}{% else %}one-fifth{% endif %}-desktop is-4-tablet">
+                    <a href="{{ currentLink.url | prepend: unit.website }}">
                         <div class="card unit">
                             {% if unit.logo %}
                                 <div class="card-image">
@@ -48,13 +41,12 @@
                             <div class="card-content">
                                 {% if unit.name %}<p class="title is-spaced is-5">{{ unit.name }}</p>{% endif %}
                                 {% if unit.acronym %}<p class="subtitle acronym is-4">{{ unit.acronym }}</p>{% endif %}
-                                {% if head %}<p class="subtitle head is-4 mt-3">Head: {{ head }}</p>{% endif %}
                             </div>
                         </div>
-                        {% if unit.website %}
                     </a>
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
         {% endfor %}
     </div>
+</div>
 {% endif %}

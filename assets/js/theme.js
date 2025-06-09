@@ -38,14 +38,14 @@ if ($("table").length > 0) {
 
 if ($("#toc").length > 0) {
   $("#toc").html(' \
-        <nav> \
-            <div class="contents"> \
-                <div class="menu" markdown="1"> \
-                    <p class="menu-label">Contents</p> \
-                </div> \
-            </div> \
-        </nav> \
-    ');
+      <nav> \
+          <div class="contents"> \
+              <div class="menu" markdown="1"> \
+                  <p class="menu-label">Contents</p> \
+              </div> \
+          </div> \
+      </nav> \
+  ');
 
   $("#toc nav .contents .menu").append('<ul id="markdown-toc"></ul>');
 
@@ -108,3 +108,47 @@ if ($("#set-subtitle").length == 1) {
   var subtitle = $("#set-subtitle").text();
   $(".hero-body .subtitle:first").text(subtitle);
 }
+
+$(".filter.filter-tag").on("click", function () {
+  // Add filter-selected class to the selected tag
+  $(this).toggleClass("filter-selected");
+
+  // Define list of selected tags and relative IDs
+  const selectedTags = $(".filter.filter-tag.filter-selected");
+  const selectedTagsID = $.map(selectedTags, function(element) {
+    return $(element).data("id-tag");
+  });
+
+  // Handle filter classes for styling
+  $(".filter.filter-tag.filter-unselected").removeClass("filter-unselected");
+  if ($(selectedTags).length > 0) {
+    $(".filter.filter-tag:not(.filter-selected)").addClass("filter-unselected");
+  }
+
+  $("li[data-tags]").each(function () {
+    var elementTagsString = $(this).data("tags");
+    var elementTags = elementTagsString.split("|");
+
+    // If there are no active tags OR all tags of the current publication are in the active tags, show it
+    if (selectedTagsID.length == 0 || selectedTagsID.every(tag => elementTags.includes(tag))) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }    
+  });
+
+  updateNumberOfPublications();
+});
+
+function updateNumberOfPublications() {
+  $("h1.year").each(function() {
+    var year = $(this).clone().children().remove().end().text().trim();
+    var numberPublications = $(this).next("ul.publications").children("li:visible").length;
+    $("#number-publications-" + year).text(numberPublications);
+  });
+}
+
+if ($("ul.publications").length > 0) {
+  console.log("Updating number of publications");
+  updateNumberOfPublications();
+} 
