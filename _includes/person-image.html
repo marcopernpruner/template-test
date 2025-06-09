@@ -5,7 +5,7 @@
 
 {% if person.image %}
     {% assign personImage = person.image %}
-{% elsif staticImage.size == 1 %}
+{% elsif staticImage.size > 0 %}
     {% assign personImage = staticImage[0].path %}
 {% elsif person.usernameFBK %}
     {% assign personImage = "https://my.fbk.eu/fbk-api/v2/picture/" | append: person.usernameFBK | append: "?w=300" %}

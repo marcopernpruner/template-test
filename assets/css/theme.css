@@ -246,7 +246,8 @@ li.bio {
 
 .card.project,
 .card.sponsor,
-.card.tool {
+.card.tool,
+.card.unit {
   padding-top: 1.3em;
 }
 
@@ -276,7 +277,8 @@ li.bio {
 .card.enterprise .card-image,
 .card.project .card-image,
 .card.sponsor .card-image,
-.card.tool .card-image {
+.card.tool .card-image,
+.card.unit .card-image {
   padding: 20px;
   height: 160px;
   width: 100%;
@@ -289,7 +291,8 @@ li.bio {
 .card.enterprise .card-image img,
 .card.project .card-image img,
 .card.sponsor .card-image img,
-.card.tool .card-image img {
+.card.tool .card-image img,
+.card.unit .card-image img {
   max-height: 130px;
   width: auto;
 }
@@ -313,7 +316,8 @@ li.bio {
   }
 }
 
-.card.person .card-content {
+.card.person .card-content,
+.card.unit .card-content {
   text-align: center;
   padding: 0.5rem 1.5rem 1.2rem;
 }
@@ -333,12 +337,16 @@ li.bio {
   margin-bottom: 0.5rem;
 }
 
-.card.person .subtitle {
+.card.person .subtitle,
+.card.unit .subtitle {
   margin-bottom: 0px;
   padding-bottom: 0px;
   font-size: 1rem;
 }
 
+.card.unit .subtitle.acronym {
+  font-size: 1.2rem;
+}
 /* END CARDS*/
 
 /* TOC */
