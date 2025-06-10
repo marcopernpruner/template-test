@@ -355,6 +355,14 @@ div.filters {
 .card.unit .subtitle.acronym {
   font-size: 1.2rem;
 }
+
+.card .card-content .units {
+  margin-bottom: 10px;
+}
+
+.card .card-content hr {
+  margin: 1rem 0;
+}
 /* END CARDS*/
 
 /* TOC */
@@ -690,71 +698,78 @@ li.item .description {
   margin-top: .5em;
 }
 
+.tag {
+  vertical-align: middle;
+}
+
+.tag:not(:last-of-type) {
+  margin-right: 1em;
+}
+
 /* POST TAGS */
 .posts .tag {
   margin-left: 30px;
 }
 
-.tag.list {
+.posts .tag.list {
   margin-left: 10px;
 }
 
-.tag.tag-attendances,
-.tag.tag-specialized {
+.posts .tag.tag-attendances,
+.posts .tag.tag-specialized {
   background-color: #539edb;
   color: #000;
 }
 
-.tag.tag-attendances.is-light,
-.tag.tag-specialized.is-light {
+.posts .tag.tag-attendances.is-light,
+.posts .tag.tag-specialized.is-light {
   background-color: #a8ceee;
   color: #000;
 }
 
-.tag.tag-events {
+.posts .tag.tag-events {
   background-color: #5bb8bf;
   color: #000;
 }
 
-.tag.tag-events.is-light {
+.posts .tag.tag-events.is-light {
   background-color: #b5dee1;
   color: #000;
 }
 
-.tag.tag-papers,
-.tag.tag-school {
+.posts .tag.tag-papers,
+.posts .tag.tag-school {
   background-color: #eb5454;
   color: #000;
 }
 
-.tag.tag-papers.is-light,
-.tag.tag-school.is-light {
+.posts .tag.tag-papers.is-light,
+.posts .tag.tag-school.is-light {
   background-color: #f5adad;
   color: #000;
 }
 
-.tag.tag-seminars,
-.tag.tag-general {
+.posts .tag.tag-seminars,
+.posts .tag.tag-general {
   background-color: #6ad25b;
   color: #000;
 }
 
-.tag.tag-seminars.is-light,
-.tag.tag-general.is-light {
+.posts .tag.tag-seminars.is-light,
+.posts .tag.tag-general.is-light {
   background-color: #ccefc7;
   color: #000;
 }
 
-.tag.tag-awards {
+.posts .tag.tag-awards {
   background-color: #ede049;
   color: #000;
 }
 
-.tag.tag-awards.is-light {
+.posts .tag.tag-awards.is-light {
   background-color: #f5ef9c;
   color: #000;
 }
-
 /* END POST TAGS */
 
 /* UNIVERSITY PROJECTS */
@@ -828,6 +843,10 @@ li.item .description {
 .university-projects-call-text {
   border: 1px solid #c7c7c7;
   padding: 10px;
+}
+
+.university-project .units {
+  margin-left: 10px;
 }
 
 .dot {
