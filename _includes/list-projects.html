@@ -67,6 +67,10 @@
                                 {% if project.titleAddon %}
                                     <p class="subtitle is-4 addon"><small>{{ project.titleAddon }}</small></p>
                                 {% endif %}
+                                {% if project.description %}
+                                    <hr />
+                                    <p class="subtitle is-4 addon"><small>{{ project.description }}</small></p>
+                                {% endif %}
                             </div>
                         </div>
                     {% if url %}
