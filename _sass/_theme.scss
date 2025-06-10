@@ -1,0 +1,50 @@
+$primary-h: hue($primary);
+$primary-s: saturation($primary);
+$primary-l: lightness($primary);
+
+$dark-mode-desaturation-amount: 15%;
+$dark-mode-lighten-amount: -20%;
+$dark-mode-min-lightness: 15%;
+
+@function get-dark-mode-hsl-components(
+  $light-color,
+  $desaturation-amount: $dark-mode-desaturation-amount,
+  $lighten-amount: $dark-mode-lighten-amount,
+  $min-lightness: $dark-mode-min-lightness
+) {
+  $h: hue($light-color);
+  $s: saturation($light-color);
+  $l: lightness($light-color);
+
+  $new-s: max(0%, $s - $desaturation-amount);
+  $new-l-initial: min(100%, $l + $lighten-amount);
+  $new-l: max($min-lightness, $new-l-initial);
+
+  @return (
+    h: $h,
+    s: $new-s,
+    l: $new-l
+  );
+}
+
+$primary-dark-hsl-components: get-dark-mode-hsl-components($primary);
+$primary-dark-h: map-get($primary-dark-hsl-components, h);
+$primary-dark-s: map-get($primary-dark-hsl-components, s);
+$primary-dark-l: map-get($primary-dark-hsl-components, l);
+$primary-dark: hsl($primary-dark-h, $primary-dark-s, $primary-dark-l);
+
+:root {
+  --primary: #{$primary};
+  --bulma-hero-h: #{$primary-h};
+  --bulma-hero-s: #{$primary-s};
+  --bulma-hero-background-l: #{$primary-l};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #{$primary-dark};
+    --bulma-hero-h: #{$primary-h};
+    --bulma-hero-s: #{$primary-dark-s};
+    --bulma-hero-background-l: #{$primary-dark-l};
+  }
+}

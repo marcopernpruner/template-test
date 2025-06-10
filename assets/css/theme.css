@@ -1,22 +1,21 @@
-:root {
-  --primary: var(--primary-light);
-  --link-color: var(--primary-light);
-
-  --bulma-hero-h: 205deg;
-  --bulma-hero-s: 100%;
-  --bulma-hero-background-l: 35%;
-}
-
 a {
   color: var(--link-color);
 }
 
 .hero.is-primary {
-  background-color: hsl(205deg, 100%, 35%);
+  background-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-background-l));
 }
 
 .hero.is-primary.is-bold {
   background-image: linear-gradient(141deg, hsl(calc(var(--bulma-hero-h) - 5deg), calc(var(--bulma-hero-s) + 10%), calc(var(--bulma-hero-background-l) + 5%)) 0%, hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-background-l)) 71%, hsl(calc(var(--bulma-hero-h) + 5deg), calc(var(--bulma-hero-s) - 10%), calc(var(--bulma-hero-background-l) - 5%)) 100%);
+}
+
+.navbar {
+  background-color: var(--primary) !important;
+}
+
+.hero.is-primary {
+  background-color: var(--primary) !important;
 }
 
 .menu-list a.is-active {
@@ -236,8 +235,6 @@ div.filters {
 /* CARDS */
 .card {
   height: 100%;
-  -webkit-box-shadow: 0 .5em 1em -.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-  -moz-box-shadow: 0 .5em 1em -.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
   border-radius: 20px;
 }
 
@@ -1029,11 +1026,6 @@ table.program td p.location::before {
 
 /* DARK THEME */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --primary: var(--primary-dark);
-    --link-color: var(--primary-light);
-  }
-
   body,
   .menu a {
     color: hsl(221deg, 14%, 71%) !important;
@@ -1063,18 +1055,6 @@ table.program td p.location::before {
     color: hsl(221deg, 14%, 93%) !important;
   }
 
-  .navbar {
-    background-color: var(--primary) !important;
-  }
-
-  .hero.is-primary {
-    background-color: var(--primary) !important;
-  }
-
-  .hero.is-primary.is-bold {
-    background-image: none;
-  }
-
   .footer {
     background-color: hsl(221, 14%, 14%) !important;
   }
@@ -1091,6 +1071,7 @@ table.program td p.location::before {
   .card {
     background-color: hsl(221, 14%, 9%) !important;
     color: hsl(221deg, 14%, 71%) !important;
+    box-shadow: 0 .5em 1em -0.125em rgba(225, 225, 225, 0.1),0 0px 0 1px rgba(225, 225, 225, .02);
   }
 
   .card .title {

@@ -1,5 +1,7 @@
 ---
 ---
 
+$primary: {{ site.primary-color | default: '#0068b4' }};
+
 // Import Main CSS file from theme
 @import "main";

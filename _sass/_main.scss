@@ -1,9 +1,8 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import "theme";
 
 $family-sans-serif: 'Montserrat', sans-serif;
-//$primary: #188eac !default;
-$primary: #0068b4 !default;
 
 $tabs-link-active-color: $primary;
 $tabs-link-active-border-bottom-color: $primary;
