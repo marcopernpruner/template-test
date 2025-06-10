@@ -276,11 +276,6 @@ div.filters {
   opacity: 0.3;
 }
 
-.card-image:first-child img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
 .card.enterprise .card-image,
 .card.project .card-image,
 .card.sponsor .card-image,
@@ -308,8 +303,14 @@ div.filters {
   content: var(--logo-default);
 }
 
+.card.topic .card-image img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 .card.person .card-image img {
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;

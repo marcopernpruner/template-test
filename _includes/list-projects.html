@@ -43,7 +43,7 @@
             {% endif %}
 
             {% if style == "card" %}
-                <div class="column is-3-desktop is-4-tablet project">
+                <div class="column is-3-desktop is-4-tablet project" data-tags="{{ project.units | join: "|" }}">
                     {% if url %}
                     <a href="{{ url }}">
                     {% endif %}
@@ -74,7 +74,7 @@
                     {% endif %}
                 </div>
             {% elsif style == "list" %}
-                <li class="item project">
+                <li class="item project" data-tags="{{ project.units | join: "|" }}">
                     {% if url %}
                     <a href="{{ url }}">
                     {% endif %}
