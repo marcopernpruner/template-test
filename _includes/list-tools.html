@@ -64,7 +64,7 @@
         {%- endif -%}
 
         {% if style == "card" %}
-            <div class="column is-3-desktop is-4-tablet tool">
+            <div class="column is-3-desktop is-4-tablet tool" data-tags="{{ tool.units | join: "|" }}">
                 {% if urlDocumentation %}
                 <a href="{{ urlDocumentation }}">
                 {% endif %}
@@ -84,6 +84,19 @@
                             </figure>
                         </div>
                         <div class="card-content">
+                            <div class="units">
+                                {% if tool.units %}
+                                    {% assign units = tool.units | sort %}
+                                    {% for tag in units %}
+                                        {% assign currentUnit = site.data.units | where: "id", tag | first %}
+                                        {% if currentUnit and currentUnit.size > 0 %}
+                                            <span class="tag tag-{{ currentUnit.id }}" style="background-color: {{ currentUnit.color | default: 'default' }};">
+                                                <b>{{ currentUnit.acronym | default: "" }}</b>
+                                            </span>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
                             <p class="title is-4">{{ tool.name }}</p>
                             {% if tool.nameAddon %}
                                 <p class="subtitle is-4 addon"><small>{{ tool.nameAddon }}</small></p>
@@ -99,7 +112,7 @@
                 {% endif %}
             </div>
         {% elsif style == "list" %}
-            <li class="item tool">
+            <li class="item tool" data-tags="{{ tool.units | join: "|" }}">
                 <b>{{ tool.name }}</b> {% if tool.nameAddon %}({{ tool.nameAddon }}){% endif %}{{ linksString }}
                 {% if tool.description and details contains "description" %}
                 <ul class="description">

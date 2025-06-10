@@ -125,7 +125,7 @@ $(".filter.filter-tag").on("click", function () {
     $(".filter.filter-tag:not(.filter-selected)").addClass("filter-unselected");
   }
 
-  $("li[data-tags]").each(function () {
+  $("[data-tags]").each(function () {
     var elementTagsString = $(this).data("tags");
     var elementTags = elementTagsString.split("|");
 

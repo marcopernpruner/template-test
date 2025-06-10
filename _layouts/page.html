@@ -2,8 +2,31 @@
 layout: default
 ---
 
+{% assign filter_data = nil %}
+{% assign filter_title = nil %}
+{% if page.filter_units %}
+    {% assign filter_data = site.data.units | where: "visible", true | sort_natural: acronym %}
+    {% assign filter_title = "Filter by Involved Unit" %}
+{% elsif page.filter_tags %}
+    {% assign filter_data = site.data.tags %}
+    {% assign filter_title = "Filter by Topic" %}
+{% endif %}
+
 <div class="content">
     <div class="columns is-multiline">
+        {% if filter_data %}
+            <div class="column is-12">
+                <div class="filters">
+                    <h2 class="no-toc">{{ filter_title }}</h2>
+                    {%- for tag in filter_data -%}
+                        <span class="filter filter-tag tag tag-{{ tag.id }}" data-id-tag="{{ tag.id }}" style="background-color: {{ tag.color | default: 'default' }};">
+                            <b>{{ tag.text | default: tag.acronym | default: "" }}</b>
+                        </span>
+                    {%- endfor -%}
+                </div>
+            </div>
+        {% endif %}
+
         <div class="column is-12">
             {{ content }}
         </div>

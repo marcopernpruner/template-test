@@ -265,7 +265,7 @@
                                 {% if unit.website %}
                                     <a href="{{ unit.website }}">
                                     {% endif %}
-                                    <span class="tag tag-{{ unit.acronym | downcase | replace: ' ', '-' }} unit">{{ unit.acronym }}</span>
+                                    <span class="tag tag-{{ unit.acronym | downcase | replace: ' ', '-' }} unit" style="background-color: {{ unit.color | default: 'default' }}>{{ unit.acronym }}</span>
                                     {% if unit.website %}
                                     </a>
                                 {% endif %}
