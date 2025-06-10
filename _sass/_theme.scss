@@ -33,11 +33,15 @@ $primary-dark-s: map-get($primary-dark-hsl-components, s);
 $primary-dark-l: map-get($primary-dark-hsl-components, l);
 $primary-dark: hsl($primary-dark-h, $primary-dark-s, $primary-dark-l);
 
+$navbar-separator: darken($primary, 5%);
+$navbar-separator-dark: darken($primary-dark, 5%);
+
 :root {
   --primary: #{$primary};
   --bulma-hero-h: #{$primary-h};
   --bulma-hero-s: #{$primary-s};
   --bulma-hero-background-l: #{$primary-l};
+  --navbar-separator: #{$navbar-separator};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,5 +50,6 @@ $primary-dark: hsl($primary-dark-h, $primary-dark-s, $primary-dark-l);
     --bulma-hero-h: #{$primary-h};
     --bulma-hero-s: #{$primary-dark-s};
     --bulma-hero-background-l: #{$primary-dark-l};
+    --navbar-separator: #{$navbar-separator-dark};
   }
 }

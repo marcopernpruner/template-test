@@ -30,7 +30,7 @@ a {
 }
 
 .navbar.is-primary {
-  border-bottom: 2px solid #00599b;
+  border-bottom: 2px solid var(--navbar-separator);
 }
 
 ul.no-bullet {
