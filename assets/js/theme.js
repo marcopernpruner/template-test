@@ -1,3 +1,79 @@
+// FUNCTIONS
+// Set default user picture if not set
+function setDefaultUserPicture(picture) {
+  picture.src = "/assets/images/no-user.jpg";
+  return true;
+}
+
+// Handle iframes in a responsive way
+function iframe16vs9() {
+  var iframes = $("iframe");
+
+  for (var i = 0; i < iframes.length; i++) {
+    var element = $(iframes[i]);
+    var width = $(element).width();
+    $(element).height(width * 9 / 16);
+  }
+}
+
+// Get URL parameters and return them as an array
+function getURLParameter(parameter) {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  const parameterString = urlParams.get(parameter);
+  var parameterArray = null;
+
+  if (parameterString) {
+    if (parameterString.includes('|')) {
+      parameterArray = parameterString.split('|');
+    } else {
+      parameterArray = [parameterString];
+    }
+  }
+
+  return parameterArray;
+}
+
+// Update items based on selected filters
+function updateItemsBasedOnFilter() {
+  // Define list of selected tags and relative IDs
+  const selectedTags = $(".filter.filter-tag.filter-selected");
+  const selectedTagsID = $.map(selectedTags, function(element) {
+    return $(element).data("id-tag");
+  });
+
+  // Handle filter classes for styling
+  $(".filter.filter-tag.filter-unselected").removeClass("filter-unselected");
+  if ($(selectedTags).length > 0) {
+    $(".filter.filter-tag:not(.filter-selected)").addClass("filter-unselected");
+  }
+
+  $("[data-tags]").each(function () {
+    var elementTagsString = $(this).data("tags");
+    var elementTags = elementTagsString.split("|");
+
+    // If there are no active tags OR all tags of the current publication are in the active tags, show it
+    if (selectedTagsID.length == 0 || selectedTagsID.every(tag => elementTags.includes(tag))) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }    
+  });
+
+  updateNumberOfPublications();
+}
+
+// Update the number of publications for each year
+function updateNumberOfPublications() {
+  $("h1.year").each(function() {
+    var year = $(this).clone().children().remove().end().text().trim();
+    var numberPublications = $(this).next("ul.publications").children("li:visible").length;
+    $("#number-publications-" + year).text(numberPublications);
+  });
+}
+
+// CODE
+// Open external links in a new tab
 $('a').each(function () {
   var a = new RegExp('/' + window.location.host + '/');
   if (!a.test(this.href) && this.href != "" && this.href != "#") {
@@ -9,21 +85,7 @@ $('a').each(function () {
   }
 });
 
-function setDefaultUserPicture(picture) {
-  picture.src = "/assets/images/no-user.jpg";
-  return true;
-}
-
-function iframe16vs9() {
-  var iframes = $("iframe");
-
-  for (var i = 0; i < iframes.length; i++) {
-    var element = $(iframes[i]);
-    var width = $(element).width();
-    $(element).height(width * 9 / 16);
-  }
-}
-
+// Handle iframe in a responsive way
 if ($("iframe").length > 0) {
   iframe16vs9();
 
@@ -32,10 +94,12 @@ if ($("iframe").length > 0) {
   });
 }
 
+// Insert all tables into a scrollable div
 if ($("table").length > 0) {
   $("table").wrap("<div class='table-scrollable'></div>");
 }
 
+// Handle TOC generation
 if ($("#toc").length > 0) {
   $("#toc").html(' \
       <nav> \
@@ -97,6 +161,7 @@ if ($("#toc").length > 0) {
   }
 }
 
+// Set the hero title, if a value is set in the #set-title element
 if ($("#set-title").length == 1) {
   var title = $("#set-title").text();
   var siteTitle = $("#site-title").text();
@@ -104,51 +169,43 @@ if ($("#set-title").length == 1) {
   $(document).prop("title", title + " - " + siteTitle);
 }
 
+// Set the hero subtitle, if a value is set in the #set-subtitle element
 if ($("#set-subtitle").length == 1) {
   var subtitle = $("#set-subtitle").text();
   $(".hero-body .subtitle:first").text(subtitle);
 }
 
-$(".filter.filter-tag").on("click", function () {
-  // Add filter-selected class to the selected tag
-  $(this).toggleClass("filter-selected");
+// Filter based on URL parameters
+if ($(".filter.filter-tag").length > 0) {
+  var parameterUnits = getURLParameter("units");
+  var parameterTopics = getURLParameter("topics");
 
-  // Define list of selected tags and relative IDs
-  const selectedTags = $(".filter.filter-tag.filter-selected");
-  const selectedTagsID = $.map(selectedTags, function(element) {
-    return $(element).data("id-tag");
-  });
-
-  // Handle filter classes for styling
-  $(".filter.filter-tag.filter-unselected").removeClass("filter-unselected");
-  if ($(selectedTags).length > 0) {
-    $(".filter.filter-tag:not(.filter-selected)").addClass("filter-unselected");
+  if (parameterUnits !== null) {
+    parameterUnits.forEach(function (unit) {
+      if (!$(".filter.filter-tag[data-id-tag='" + unit + "']").hasClass("filter-selected")) {
+        $(".filter.filter-tag[data-id-tag='" + unit + "']").addClass("filter-selected");
+      }
+    });
+  } else if (parameterTopics !== null) {
+    parameterTopics.forEach(function (topic) {
+      if (!$(".filter.filter-tag[data-id-tag='" + topic + "']").hasClass("filter-selected")) {
+        $(".filter.filter-tag[data-id-tag='" + topic + "']").addClass("filter-selected");
+      }
+    });
   }
 
-  $("[data-tags]").each(function () {
-    var elementTagsString = $(this).data("tags");
-    var elementTags = elementTagsString.split("|");
+  updateItemsBasedOnFilter();
+}
 
-    // If there are no active tags OR all tags of the current publication are in the active tags, show it
-    if (selectedTagsID.length == 0 || selectedTagsID.every(tag => elementTags.includes(tag))) {
-      $(this).show();
-    } else {
-      $(this).hide();
-    }    
-  });
-
-  updateNumberOfPublications();
-});
-
-function updateNumberOfPublications() {
-  $("h1.year").each(function() {
-    var year = $(this).clone().children().remove().end().text().trim();
-    var numberPublications = $(this).next("ul.publications").children("li:visible").length;
-    $("#number-publications-" + year).text(numberPublications);
+// Filter based on click
+if ($(".filter.filter-tag").length > 0) {
+  $(".filter.filter-tag").on("click", function () {
+    $(this).toggleClass("filter-selected");
+    updateItemsBasedOnFilter();
   });
 }
 
+// Update number of publications
 if ($("ul.publications").length > 0) {
-  console.log("Updating number of publications");
   updateNumberOfPublications();
-} 
+}
