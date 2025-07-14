@@ -41,6 +41,7 @@ $navbar-separator-dark: darken($primary-dark, 5%);
   --bulma-hero-h: #{$primary-h};
   --bulma-hero-s: #{$primary-s};
   --bulma-hero-background-l: #{$primary-l};
+  --link-color: #{$primary};
   --navbar-separator: #{$navbar-separator};
 }
 
@@ -50,6 +51,7 @@ $navbar-separator-dark: darken($primary-dark, 5%);
     --bulma-hero-h: #{$primary-h};
     --bulma-hero-s: #{$primary-dark-s};
     --bulma-hero-background-l: #{$primary-dark-l};
+    --link-color: #{$primary-dark};
     --navbar-separator: #{$navbar-separator-dark};
   }
 }
