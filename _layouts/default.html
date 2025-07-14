@@ -18,6 +18,10 @@
 >
     {% include head.html %}
     <body>
+        <span id="entity_type" class="hidden">{{ site.entity_type }}</span>
+        {% if site.entity_type == "unit" %}
+            <span id="center_url" class="hidden">{{ site.organization.center.website }}</span>
+        {% endif %}
         {% if site.cookie_policy %}
             {% include cookie-banner.html %}
         {% endif %}

@@ -63,6 +63,19 @@
                                 </figure>
                             </div>
                             <div class="card-content">
+                                <div class="units">
+                                    {% if project.units %}
+                                        {% assign units = project.units | sort %}
+                                        {% for tag in units %}
+                                            {% assign currentUnit = site.data.units | where: "id", tag | first %}
+                                            {% if currentUnit and currentUnit.size > 0 %}
+                                                <span class="tag tag-{{ currentUnit.id }}" style="background-color: {{ currentUnit.color | default: 'default' }};">
+                                                    <b>{{ currentUnit.acronym | default: "" }}</b>
+                                                </span>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
                                 <p class="title is-4">{{ project.title }}</p>
                                 {% if project.titleAddon %}
                                     <p class="subtitle is-4 addon"><small>{{ project.titleAddon }}</small></p>
