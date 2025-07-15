@@ -18,6 +18,10 @@
             {% assign person = site.data.people | where: "id", entry | first %}
         {% endif %}
         {% if person %}
+            {% assign personWithAffiliation = person | where_exp: "person", "person.affiliations.size > 0" %}
+            {% if personFromIdWithAffiliation.size %}
+                {% assign person = personWithAffiliation[0] %}
+            {% endif %}
             {% assign people = people | push: person %}
         {% endif %}
     {% endfor %}
